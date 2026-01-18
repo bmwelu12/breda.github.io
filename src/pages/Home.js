@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 function Home() {
@@ -19,9 +20,9 @@ function Home() {
             <a href="#projects" className="btn btn-primary">
               View My Work
             </a>
-            <a href="/about" className="btn btn-secondary">
+            <Link to="/about" className="btn btn-secondary">
               Learn More About Me
-            </a>
+            </Link>
           </div>
         </div>
         <div className="home-image">

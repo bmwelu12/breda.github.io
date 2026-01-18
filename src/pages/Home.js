@@ -7,12 +7,13 @@ function Home() {
       <div className="home-container">
         <div className="home-content">
           <h1 className="home-title">
-            Hi, I'm <span className="highlight">Breda</span>
+            Hi, I'm <span className="highlight">Breda Mwelu</span>
           </h1>
-          <p className="home-subtitle">Developer & Data Scientist</p>
+          <p className="home-subtitle">Technical Product Manager & Full-Stack Developer</p>
           <p className="home-description">
-            Welcome to my portfolio! I'm passionate about machine learning, web development,
-            and building intelligent solutions that make a difference.
+            Welcome to my portfolio! I'm a Computer Science graduate from Drew University with expertise in 
+            machine learning, product management, and full-stack development. Passionate about building 
+            intelligent solutions that solve real-world problems.
           </p>
           <div className="home-buttons">
             <a href="#projects" className="btn btn-primary">

@@ -65,6 +65,180 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+.education-item {
+  margin-top: 1rem;
+}
+
+.education-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.education-degree {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.education-details {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.3rem;
+}
+
+.experience-item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.experience-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.experience-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.experience-company {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.experience-date {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: auto;
+}
+
+.experience-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.experience-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.experience-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: bold;
+}
+
+.project-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.project-link {
+  margin-bottom: 1rem;
+}
+
+.project-link a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.project-link a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.skills-category {
+  margin-bottom: 2rem;
+}
+
+.skills-category:last-child {
+  margin-bottom: 0;
+}
+
+.skills-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.skills-category:first-child .skills-subtitle {
+  margin-top: 0;
+}
+
+.contact-info {
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  font-size: 1rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.5rem;
+}
+
+.contact-item strong {
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.contact-item a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -216,5 +390,25 @@
   
   .contact-buttons {
     justify-content: center;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .experience-date {
+    margin-left: 0;
+  }
+  
+  .education-title,
+  .experience-title,
+  .project-title {
+    font-size: 1.1rem;
+  }
+  
+  .experience-list li {
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
   }
 }

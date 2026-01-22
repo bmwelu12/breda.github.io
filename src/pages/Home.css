@@ -7,6 +7,7 @@
   padding: 4rem 2rem;
   min-height: 100vh;
   position: relative;
+  padding-top: calc(4rem + 80px); /* Add padding for fixed navbar */
 }
 
 .home-container {

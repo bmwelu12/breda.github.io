@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow-x: hidden;
+  /* Removed overflow-x: hidden to prevent breaking sticky/fixed positioning */
 }
 
 .App > *:not(.data-background) {
@@ -12,16 +12,17 @@
 }
 
 .navbar {
-  background: rgba(0, 0, 0, 0.95);
+  background-color: rgba(10, 10, 10, 0.98);
+  background: rgba(10, 10, 10, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 1.2rem 0;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 9999;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), 0 0 1px rgba(91, 127, 168, 0.2);
   border-bottom: 1px solid rgba(91, 127, 168, 0.1);
 }

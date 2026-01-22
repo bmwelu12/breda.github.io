@@ -12,7 +12,6 @@
 }
 
 .navbar {
-  background-color: rgba(10, 10, 10, 0.98);
   background: rgba(10, 10, 10, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -22,7 +21,7 @@
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 9999; /* High z-index so it never disappears */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), 0 0 1px rgba(91, 127, 168, 0.2);
   border-bottom: 1px solid rgba(91, 127, 168, 0.1);
 }

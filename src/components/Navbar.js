@@ -20,48 +20,16 @@ function Navbar() {
           behavior: 'smooth'
         });
         
-        // Update active section immediately when clicked
         setActiveSection(sectionId);
       }
     };
   };
 
   useEffect(() => {
-    // Scroll-spy: Use Intersection Observer to detect which section is in viewport
-    const sections = document.querySelectorAll('#home, #about-section');
+    const sections = document.querySelectorAll('#home, #about, #experiences, #contact');
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar ? navbar.offsetHeight : 80;
 
-    // Function to determine which section should be active based on scroll position
-    const updateActiveSection = () => {
-      const scrollPosition = window.scrollY + navbarHeight + 150; // Offset for better detection
-      
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionBottom = sectionTop + sectionHeight;
-        
-        // Check if scroll position is within this section
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-          setActiveSection(section.id);
-        }
-      });
-
-      // Handle case when at the very top
-      if (window.scrollY < 100) {
-        setActiveSection('home');
-      }
-
-      // Handle case when at the bottom (last section should be active)
-      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50) {
-        const lastSection = sections[sections.length - 1];
-        if (lastSection && lastSection.id) {
-          setActiveSection(lastSection.id);
-        }
-      }
-    };
-
-    // Use Intersection Observer as primary method
     const observerOptions = {
       root: null,
       rootMargin: `-${navbarHeight}px 0px -60% 0px`,
@@ -87,18 +55,22 @@ function Navbar() {
       }
     });
 
-    // Also listen to scroll events for more responsive updates
-    window.addEventListener('scroll', updateActiveSection, { passive: true });
-    updateActiveSection(); // Check on mount
+    // Handle top of page
+    const handleScroll = () => {
+      if (window.scrollY < 100) {
+        setActiveSection('home');
+      }
+    };
 
-    // Cleanup
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
     return () => {
       sections.forEach((section) => {
         if (section.id) {
           observer.unobserve(section);
         }
       });
-      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -120,11 +92,29 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <a 
-              href="#about-section" 
-              className={`nav-link ${activeSection === 'about-section' ? 'active' : ''}`}
-              onClick={scrollToSection('about-section')}
+              href="#about" 
+              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
+              onClick={scrollToSection('about')}
             >
               About
+            </a>
+          </li>
+          <li className="nav-item">
+            <a 
+              href="#experiences" 
+              className={`nav-link ${activeSection === 'experiences' ? 'active' : ''}`}
+              onClick={scrollToSection('experiences')}
+            >
+              Experiences
+            </a>
+          </li>
+          <li className="nav-item">
+            <a 
+              href="#contact" 
+              className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
+              onClick={scrollToSection('contact')}
+            >
+              Contact
             </a>
           </li>
         </ul>

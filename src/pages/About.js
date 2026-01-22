@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './About.css';
 
 function About() {
+  const [visibleSections, setVisibleSections] = useState({});
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => ({
+              ...prev,
+              [entry.target.className]: true,
+            }));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const sections = document.querySelectorAll('.about-section, .skill-item, .service-card');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="about">
+    <div className="about" id="about-section">
       <div className="about-container">
         <div className="about-header">
           <h1 className="about-title">About Me</h1>

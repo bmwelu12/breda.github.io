@@ -1,16 +1,56 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
 
 function Home() {
+  const [typedText, setTypedText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+
+  const fullText = 'Technical Product Manager & Full-Stack Developer';
+  const typingSpeed = 50;
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex < fullText.length) {
+        setTypedText(fullText.substring(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+        // Blink cursor
+        setInterval(() => setShowCursor(prev => !prev), 530);
+      }
+    }, typingSpeed);
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
+  const scrollToAbout = (e) => {
+    e.preventDefault();
+    const aboutSection = document.getElementById('about-section');
+    const navbar = document.querySelector('.navbar');
+    if (aboutSection && navbar) {
+      const navbarHeight = navbar.offsetHeight;
+      const elementPosition = aboutSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <div className="home">
+    <div id="home" className="home">
       <div className="home-container">
         <div className="home-content">
           <h1 className="home-title">
             Hi, I'm <span className="highlight">Breda Mwelu</span>
           </h1>
-          <p className="home-subtitle">Technical Product Manager & Full-Stack Developer</p>
+          <p className="home-subtitle">
+            {typedText}
+            <span className={`typing-cursor ${showCursor ? 'visible' : ''}`}>|</span>
+          </p>
           <p className="home-description">
             Welcome to my portfolio! I'm a Computer Science graduate from Drew University with expertise in 
             machine learning, product management, and full-stack development. Passionate about building 
@@ -20,9 +60,9 @@ function Home() {
             <a href="#projects" className="btn btn-primary">
               View My Work
             </a>
-            <Link to="/about" className="btn btn-secondary">
+            <button type="button" className="btn btn-secondary" onClick={scrollToAbout}>
               Learn More About Me
-            </Link>
+            </button>
           </div>
         </div>
         <div className="home-image">

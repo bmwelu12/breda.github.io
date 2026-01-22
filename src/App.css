@@ -6,7 +6,7 @@
   /* Removed overflow-x: hidden to prevent breaking sticky/fixed positioning */
 }
 
-.App > *:not(.data-background) {
+.App > *:not(.data-background):not(.navbar) {
   position: relative;
   z-index: 1;
 }

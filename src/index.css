@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scroll, but allow vertical */
 }
 
 body {
@@ -17,6 +18,8 @@ body {
   background: #0a0a0a;
   min-height: 100vh;
   color: #e0e6ed;
+  overflow-x: hidden; /* Prevent horizontal scroll, but allow vertical */
+  /* No overflow: hidden on body to allow sticky/fixed positioning to work */
 }
 
 code {

@@ -88,6 +88,14 @@
   transform: translateY(-2px);
 }
 
+.nav-link.active {
+  color: #7a9bc4;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .nav-container {
     padding: 0 1rem;

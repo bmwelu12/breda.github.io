@@ -94,7 +94,7 @@ function Home() {
       </section>
 
       {/* Section 3: Experiences - Interactive Cards */}
-      <section id="experiences" className="experiences-section">
+      <section id="experience" className="experiences-section">
         <div className="experiences-container">
           <h2 className="section-title">Experiences</h2>
           <div className="experiences-cards">
@@ -198,66 +198,148 @@ function Home() {
         </div>
       </section>
 
-      {/* Section 4: Media - Visual Showcase */}
+      {/* Section 4: Media - External Links */}
       <section id="media" className="media-section">
         <div className="media-container">
-          <h2 className="media-title">Media</h2>
-          <div className="media-grid">
-            {/* SurtAI Media */}
-            <div className="media-item">
-              {/* Insert AI-generated image here: Digital globe with security nodes */}
-              <img 
-                src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=SurtAI+Media" 
-                alt="SurtAI - Digital Globe with Security Nodes"
-                className="media-img"
-              />
-              <div className="media-overlay">
-                <h3 className="media-item-title">SurtAI</h3>
-                <p className="media-item-desc">Technical Product Management</p>
+          <h2 className="media-title">Media & Links</h2>
+          <div className="media-links-grid">
+            {/* Drew Summer Science Institute */}
+            <a 
+              href="https://drew.edu/2023/08/15/drew-university-students-gain-skills-experience-in-the-drew-summer-science-institute/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="media-link-card"
+            >
+              <div className="media-link-bg">
+                {/* Insert AI-generated image here: Futuristic laboratory setting with holographic data screens and a microscope, soft blue and teal lighting, clean aesthetic */}
+                <img 
+                  src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=Drew+Summer+Science+Institute" 
+                  alt="Drew Summer Science Institute"
+                  className="media-link-img"
+                />
+                <div className="media-link-overlay"></div>
               </div>
-            </div>
+              <div className="media-link-content">
+                <h3 className="media-link-title">Drew Summer Science Institute</h3>
+                <p className="media-link-desc">Research Publication</p>
+                <span className="media-link-arrow">→</span>
+              </div>
+            </a>
 
-            {/* Drew Science Media */}
-            <div className="media-item">
-              {/* Insert AI-generated image here: Fashion meets AI neural network visualization */}
-              <img 
-                src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Fashion+AI+Research" 
-                alt="Fashion Meets AI - Neural Network Visualization"
-                className="media-img"
-              />
-              <div className="media-overlay">
-                <h3 className="media-item-title">Drew Science</h3>
-                <p className="media-item-desc">Fashion Meets AI Research</p>
+            {/* Maparole Publications */}
+            <a 
+              href="https://maparole.org/author/fren334/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="media-link-card"
+            >
+              <div className="media-link-bg">
+                {/* Insert AI-generated image here: Academic research papers with neural network visualizations, scholarly aesthetic */}
+                <img 
+                  src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Maparole+Publications" 
+                  alt="Maparole Publications"
+                  className="media-link-img"
+                />
+                <div className="media-link-overlay"></div>
               </div>
-            </div>
+              <div className="media-link-content">
+                <h3 className="media-link-title">Maparole Publications</h3>
+                <p className="media-link-desc">Research Articles</p>
+                <span className="media-link-arrow">→</span>
+              </div>
+            </a>
 
-            {/* Beats By Dre Media */}
-            <div className="media-item">
-              {/* Insert AI-generated image here: High-end lifestyle photography of headphones and data */}
-              <img 
-                src="https://via.placeholder.com/600x400/9db5d1/ffffff?text=Beats+Data+Analytics" 
-                alt="Beats By Dre - Lifestyle & Data Analytics"
-                className="media-img"
-              />
-              <div className="media-overlay">
-                <h3 className="media-item-title">Beats By Dre</h3>
-                <p className="media-item-desc">Data Analytics & Marketing</p>
+            {/* Dean's List - General Info */}
+            <a 
+              href="https://drew.edu/academic/deans-office-college-of-liberal-arts/cla-deans-list/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="media-link-card"
+            >
+              <div className="media-link-bg">
+                {/* Insert AI-generated image here: High-quality, minimalist 3D render of a gold academic medal or a sleek glass trophy on a dark reflective surface, cinematic lighting, 8k */}
+                <img 
+                  src="https://via.placeholder.com/600x400/9db5d1/ffffff?text=Dean%27s+List+Info" 
+                  alt="Dean's List Information"
+                  className="media-link-img"
+                />
+                <div className="media-link-overlay"></div>
               </div>
-            </div>
+              <div className="media-link-content">
+                <h3 className="media-link-title">Dean's List</h3>
+                <p className="media-link-desc">Academic Achievement</p>
+                <span className="media-link-arrow">→</span>
+              </div>
+            </a>
 
-            {/* TechJoy Media */}
-            <div className="media-item">
-              {/* Insert AI-generated image here: Modern laptop on desk with code/development theme */}
-              <img 
-                src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=TechJoy+Development" 
-                alt="TechJoy - Software Engineering"
-                className="media-img"
-              />
-              <div className="media-overlay">
-                <h3 className="media-item-title">TechJoy</h3>
-                <p className="media-item-desc">Software Engineering & CI/CD</p>
+            {/* Spring 2024 Dean's List */}
+            <a 
+              href="https://drew.edu/2024/07/01/drew-university-spring-2024-deans-list/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="media-link-card"
+            >
+              <div className="media-link-bg">
+                {/* Insert AI-generated image here: Academic excellence certificate with elegant typography, gold accents, professional design */}
+                <img 
+                  src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=Spring+2024+Dean%27s+List" 
+                  alt="Spring 2024 Dean's List"
+                  className="media-link-img"
+                />
+                <div className="media-link-overlay"></div>
               </div>
-            </div>
+              <div className="media-link-content">
+                <h3 className="media-link-title">Spring 2024 Dean's List</h3>
+                <p className="media-link-desc">Academic Recognition</p>
+                <span className="media-link-arrow">→</span>
+              </div>
+            </a>
+
+            {/* Fall 2022 Dean's List */}
+            <a 
+              href="https://drew.edu/2023/01/24/drew-university-fall-2022-deans-list/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="media-link-card"
+            >
+              <div className="media-link-bg">
+                {/* Insert AI-generated image here: Academic achievement badge with modern design, blue and gold color scheme */}
+                <img 
+                  src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Fall+2022+Dean%27s+List" 
+                  alt="Fall 2022 Dean's List"
+                  className="media-link-img"
+                />
+                <div className="media-link-overlay"></div>
+              </div>
+              <div className="media-link-content">
+                <h3 className="media-link-title">Fall 2022 Dean's List</h3>
+                <p className="media-link-desc">Academic Recognition</p>
+                <span className="media-link-arrow">→</span>
+              </div>
+            </a>
+
+            {/* Community Leaders Award */}
+            <a 
+              href="https://drew.edu/2024/04/19/drew-university-celebrates-community-leaders/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="media-link-card"
+            >
+              <div className="media-link-bg">
+                {/* Insert AI-generated image here: Community leadership award with inspiring design, warm lighting, professional aesthetic */}
+                <img 
+                  src="https://via.placeholder.com/600x400/9db5d1/ffffff?text=Community+Leaders+Award" 
+                  alt="Community Leaders Award"
+                  className="media-link-img"
+                />
+                <div className="media-link-overlay"></div>
+              </div>
+              <div className="media-link-content">
+                <h3 className="media-link-title">Community Leaders Award</h3>
+                <p className="media-link-desc">Leadership Recognition</p>
+                <span className="media-link-arrow">→</span>
+              </div>
+            </a>
           </div>
         </div>
       </section>

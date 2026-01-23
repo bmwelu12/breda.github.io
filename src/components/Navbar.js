@@ -26,7 +26,7 @@ function Navbar() {
   };
 
   useEffect(() => {
-    const sections = document.querySelectorAll('#home, #about, #experiences, #media, #contact');
+      const sections = document.querySelectorAll('#home, #about, #experience, #media, #contact');
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar ? navbar.offsetHeight : 80;
 
@@ -48,17 +48,10 @@ function Navbar() {
         const sectionHeight = section.offsetHeight;
         const sectionBottom = sectionTop + sectionHeight;
 
-        // For experiences section, keep it active if we're in it or in media (since media follows experiences)
-        if (section.id === 'experiences') {
-          const mediaSection = document.getElementById('media');
-          if (mediaSection) {
-            const mediaTop = mediaSection.offsetTop;
-            // If scroll position is between experiences and media, keep experiences active
-            if (scrollPosition >= sectionTop && scrollPosition < mediaTop) {
-              currentSection = 'experiences';
-            }
-          } else if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-            currentSection = 'experiences';
+        // For experience section, keep it active if we're in it
+        if (section.id === 'experience') {
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            currentSection = 'experience';
           }
         } else if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
           currentSection = section.id;
@@ -142,9 +135,9 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <a 
-              href="#experiences" 
-              className={`nav-link ${activeSection === 'experiences' ? 'active' : ''}`}
-              onClick={scrollToSection('experiences')}
+              href="#experience" 
+              className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}
+              onClick={scrollToSection('experience')}
             >
               Experiences
             </a>

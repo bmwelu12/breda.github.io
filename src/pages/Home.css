@@ -8,6 +8,8 @@
   padding: 4rem 2rem;
   position: relative;
   padding-top: calc(4rem + 80px); /* Account for fixed navbar */
+  scroll-margin-top: 80px;
+  scroll-snap-align: start;
 }
 
 .home-hero {
@@ -130,6 +132,8 @@
   display: flex;
   align-items: center;
   position: relative;
+  scroll-margin-top: 80px;
+  scroll-snap-align: start;
 }
 
 .about-container {
@@ -187,117 +191,86 @@
   display: block;
 }
 
-/* Section 3: Experiences & Media - Bento Box Grid */
+/* Section 3: Experiences - Clean Minimal List */
 .experiences-section {
   min-height: 100vh;
   padding: 6rem 2rem;
   position: relative;
+  scroll-margin-top: 80px;
+  scroll-snap-align: start;
 }
 
 .experiences-container {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   width: 100%;
 }
 
-.experiences-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+.experiences-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   margin-top: 3rem;
 }
 
-.experience-card {
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 1px rgba(91, 127, 168, 0.15);
-  border: 1px solid rgba(91, 127, 168, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+.experience-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(91, 127, 168, 0.2);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-header {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.experience-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(91, 127, 168, 0.2);
-  border-color: rgba(91, 127, 168, 0.3);
-}
-
-.card-image {
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  position: relative;
-}
-
-.experience-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.experience-card:hover .experience-img {
-  transform: scale(1.1);
-}
-
-.card-content {
-  padding: 2rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-title {
+.experience-title {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 1rem;
   color: #e0e6ed;
-  border-bottom: 2px solid rgba(91, 127, 168, 0.3);
-  padding-bottom: 0.5rem;
+  margin: 0;
 }
 
-.card-description {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(224, 230, 237, 0.8);
-  flex: 1;
-  margin-bottom: 1rem;
-}
-
-.card-company {
-  font-size: 1rem;
+.experience-company {
+  font-size: 1.1rem;
   color: #7a9bc4;
   font-weight: 600;
-  margin-bottom: 0.25rem;
 }
 
-.card-period {
-  font-size: 0.9rem;
+.experience-location {
+  font-size: 1rem;
   color: rgba(224, 230, 237, 0.7);
-  margin-bottom: 1rem;
-  font-style: italic;
 }
 
-.card-description-list {
+.experience-period {
+  font-size: 0.95rem;
+  color: rgba(224, 230, 237, 0.6);
+  font-style: italic;
+  margin-left: auto;
+}
+
+.experience-bullets {
   list-style: none;
   padding: 0;
-  margin: 0 0 1rem 0;
-  flex: 1;
+  margin: 0;
 }
 
-.card-description-list li {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: rgba(224, 230, 237, 0.8);
+.experience-bullets li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(224, 230, 237, 0.9);
   margin-bottom: 0.75rem;
-  padding-left: 1.25rem;
+  padding-left: 1.5rem;
   position: relative;
 }
 
-.card-description-list li::before {
+.experience-bullets li::before {
   content: '▸';
   position: absolute;
   left: 0;
@@ -305,43 +278,112 @@
   font-weight: bold;
 }
 
-.card-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(91, 127, 168, 0.2);
-}
-
-.card-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: rgba(91, 127, 168, 0.1);
-  border: 1px solid rgba(91, 127, 168, 0.3);
-  border-radius: 20px;
+.experience-bullets li strong {
   color: #7a9bc4;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-weight: 600;
 }
 
-.card-link:hover {
-  background: rgba(91, 127, 168, 0.2);
-  border-color: rgba(91, 127, 168, 0.5);
-  color: #9db5d1;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(91, 127, 168, 0.3);
+
+/* Section 4: Media - Visual Showcase */
+.media-section {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: rgba(5, 5, 5, 0.8); /* Darker background to feel like new page */
+  position: relative;
+  scroll-margin-top: 80px;
+  scroll-snap-align: start;
 }
 
-/* Section 4: Contact - Footer */
+.media-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.media-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: #e0e6ed;
+  text-align: center;
+  background: linear-gradient(135deg, #5b7fa8 0%, #7a9bc4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  width: 100%;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(91, 127, 168, 0.3);
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.media-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(91, 127, 168, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.media-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(91, 127, 168, 0.3);
+}
+
+.media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.media-item:hover .media-img {
+  transform: scale(1.1);
+}
+
+.media-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 2rem;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.media-item:hover .media-overlay {
+  transform: translateY(-5px);
+}
+
+.media-item-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e0e6ed;
+  margin-bottom: 0.5rem;
+}
+
+.media-item-desc {
+  font-size: 1rem;
+  color: rgba(224, 230, 237, 0.8);
+}
+
+/* Section 5: Contact - Footer */
 .contact-section {
   min-height: 60vh;
   padding: 6rem 2rem 4rem;
   background: rgba(0, 0, 0, 0.3);
   border-top: 1px solid rgba(91, 127, 168, 0.1);
   position: relative;
+  scroll-margin-top: 80px;
+  scroll-snap-align: start;
 }
 
 .contact-container {
@@ -408,7 +450,7 @@
     order: -1;
   }
 
-  .experiences-grid {
+  .media-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -453,8 +495,12 @@
     font-size: 2rem;
   }
 
-  .experiences-grid {
+  .media-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .media-title {
+    font-size: 2rem;
   }
 }

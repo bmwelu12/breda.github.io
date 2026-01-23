@@ -88,170 +88,140 @@ function Home() {
         </div>
       </section>
 
-      {/* Section 3: Experiences & Media - Bento Box Grid */}
+      {/* Section 3: Experiences - Clean Minimal List */}
       <section id="experiences" className="experiences-section">
         <div className="experiences-container">
-          <h2 className="section-title">Experiences & Media</h2>
-          <div className="experiences-grid">
-            {/* SurtAI - Technical Product Manager */}
-            <div className="experience-card work-card">
-              <div className="card-image">
-                {/* Insert AI-generated image here to match experience */}
-                <img 
-                  src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=SurtAI" 
-                  alt="SurtAI Technical Product Manager"
-                  className="experience-img"
-                />
+          <h2 className="section-title">Experiences</h2>
+          <div className="experiences-list">
+            {/* SurtAI */}
+            <div className="experience-item">
+              <div className="experience-header">
+                <h3 className="experience-title">Technical Product Manager</h3>
+                <span className="experience-company">SurtAI</span>
+                <span className="experience-location">Boston, MA</span>
+                <span className="experience-period">Oct 2025 - Present</span>
               </div>
-              <div className="card-content">
-                <h3 className="card-title">Technical Product Manager</h3>
-                <p className="card-company">SurtAI • Boston, MA</p>
-                <p className="card-period">Oct 2025 - Present</p>
-                <ul className="card-description-list">
-                  <li>Serve as sole technical product and project manager building IDV and Geolocation features launching for 4 clients in 3 months</li>
-                  <li>Manage offshore and near shore engineering team, owning roadmap, backlog, and cross-timezone delivery</li>
-                  <li>Design and integrate verification flows, balancing compliance, fraud risk and user experience</li>
-                  <li>Lead 0 to 1 build and successful client launches, translating regulatory requirements into technical specifications and execution plans</li>
-                </ul>
+              <ul className="experience-bullets">
+                <li>Serve as sole technical product and project manager building IDV and Geolocation features launching for <strong>4 clients in 3 months</strong></li>
+                <li>Manage offshore and near shore engineering team, owning roadmap, backlog, and cross-timezone delivery</li>
+                <li>Design and integrate verification flows, balancing compliance, fraud risk and user experience</li>
+                <li>Lead 0 to 1 build and successful client launches, translating regulatory requirements into technical specifications and execution plans</li>
+              </ul>
+            </div>
+
+            {/* Beats By Dre */}
+            <div className="experience-item">
+              <div className="experience-header">
+                <h3 className="experience-title">Consumer Data Analyst Intern</h3>
+                <span className="experience-company">Beats By Dre</span>
+                <span className="experience-location">New York, NY</span>
+                <span className="experience-period">Jun 2024 - Aug 2024</span>
+              </div>
+              <ul className="experience-bullets">
+                <li>Achieved a <strong>10% increase</strong> in targeted marketing effectiveness by informing strategic brand and marketing decisions</li>
+                <li>Collected and analyzed data from over <strong>500 surveys</strong>, integrating both quantitative and qualitative findings</li>
+                <li>Delivered actionable insights through three detailed reports and two visual summaries based on in-depth research</li>
+              </ul>
+            </div>
+
+            {/* Drew Summer Science Institute */}
+            <div className="experience-item">
+              <div className="experience-header">
+                <h3 className="experience-title">Machine Learning Researcher</h3>
+                <span className="experience-company">Drew Summer Science Institute</span>
+                <span className="experience-location">Madison, NJ</span>
+                <span className="experience-period">Jun 2023 - Aug 2023</span>
+              </div>
+              <ul className="experience-bullets">
+                <li>Analyzed <strong>15,000 Vogue Runway photos</strong> and <strong>1,000 social media images</strong> using object detection and image classification</li>
+                <li>Applied LSTM models for time series analysis, predicting fashion trends from historical data and visual patterns</li>
+                <li>Enhanced forecasting accuracy by <strong>70%</strong>, improving predictive capabilities for brands and consumers</li>
+              </ul>
+            </div>
+
+            {/* TechJoy */}
+            <div className="experience-item">
+              <div className="experience-header">
+                <h3 className="experience-title">Software Engineering Intern</h3>
+                <span className="experience-company">TechJoy</span>
+                <span className="experience-location">Madison, NJ</span>
+                <span className="experience-period">May 2023 - Sept 2023</span>
+              </div>
+              <ul className="experience-bullets">
+                <li>Increased deployment efficiency by <strong>25%</strong> and reduced post-deployment bugs by <strong>15%</strong> through the integration of Heroku CI/CD pipelines for staging and production</li>
+                <li>Ensured correct application performance for the bike racing app OffroadFunFinder.com by implementing end-to-end testing with Cypress</li>
+                <li>Executed comprehensive CRUD operations testing to validate the functionality and reliability of the application</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Media - Visual Showcase */}
+      <section id="media" className="media-section">
+        <div className="media-container">
+          <h2 className="media-title">Media</h2>
+          <div className="media-grid">
+            {/* SurtAI Media */}
+            <div className="media-item">
+              {/* Insert AI-generated image here: Digital globe with security nodes */}
+              <img 
+                src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=SurtAI+Media" 
+                alt="SurtAI - Digital Globe with Security Nodes"
+                className="media-img"
+              />
+              <div className="media-overlay">
+                <h3 className="media-item-title">SurtAI</h3>
+                <p className="media-item-desc">Technical Product Management</p>
               </div>
             </div>
 
-            {/* Beats By Dre - Consumer Data Analyst */}
-            <div className="experience-card work-card">
-              <div className="card-image">
-                {/* Insert AI-generated image here to match experience */}
-                <img 
-                  src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Beats+By+Dre" 
-                  alt="Beats By Dre Consumer Data Analyst"
-                  className="experience-img"
-                />
-              </div>
-              <div className="card-content">
-                <h3 className="card-title">Consumer Data Analyst Intern</h3>
-                <p className="card-company">Beats By Dre • New York, NY</p>
-                <p className="card-period">Jun 2024 - Aug 2024</p>
-                <ul className="card-description-list">
-                  <li>Achieved a 10% increase in targeted marketing effectiveness by informing strategic brand and marketing decisions</li>
-                  <li>Collected and analyzed data from over 500 surveys, integrating both quantitative and qualitative findings</li>
-                  <li>Delivered actionable insights through three detailed reports and two visual summaries based on in-depth research</li>
-                </ul>
+            {/* Drew Science Media */}
+            <div className="media-item">
+              {/* Insert AI-generated image here: Fashion meets AI neural network visualization */}
+              <img 
+                src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Fashion+AI+Research" 
+                alt="Fashion Meets AI - Neural Network Visualization"
+                className="media-img"
+              />
+              <div className="media-overlay">
+                <h3 className="media-item-title">Drew Science</h3>
+                <p className="media-item-desc">Fashion Meets AI Research</p>
               </div>
             </div>
 
-            {/* Drew Summer Science Institute - ML Researcher */}
-            <div className="experience-card research-card">
-              <div className="card-image">
-                {/* Insert AI-generated image here to match experience */}
-                <img 
-                  src="https://via.placeholder.com/600x400/9db5d1/ffffff?text=ML+Research" 
-                  alt="Machine Learning Research"
-                  className="experience-img"
-                />
-              </div>
-              <div className="card-content">
-                <h3 className="card-title">Machine Learning Researcher</h3>
-                <p className="card-company">Drew Summer Science Institute • Madison, NJ</p>
-                <p className="card-period">Jun 2023 - Aug 2023</p>
-                <ul className="card-description-list">
-                  <li>Analyzed 15,000 Vogue Runway photos and 1,000 social media images using object detection and image classification</li>
-                  <li>Applied LSTM models for time series analysis, predicting fashion trends from historical data and visual patterns</li>
-                  <li>Enhanced forecasting accuracy by 70%, improving predictive capabilities for brands and consumers</li>
-                </ul>
-                <div className="card-links">
-                  <a 
-                    href="https://drew.edu/2023/08/15/drew-university-students-gain-skills-experience-in-the-drew-summer-science-institute/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="card-link"
-                  >
-                    Summer Science Institute
-                  </a>
-                  <a 
-                    href="https://maparole.org/author/fren334/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="card-link"
-                  >
-                    Maparole Publications
-                  </a>
-                </div>
+            {/* Beats By Dre Media */}
+            <div className="media-item">
+              {/* Insert AI-generated image here: High-end lifestyle photography of headphones and data */}
+              <img 
+                src="https://via.placeholder.com/600x400/9db5d1/ffffff?text=Beats+Data+Analytics" 
+                alt="Beats By Dre - Lifestyle & Data Analytics"
+                className="media-img"
+              />
+              <div className="media-overlay">
+                <h3 className="media-item-title">Beats By Dre</h3>
+                <p className="media-item-desc">Data Analytics & Marketing</p>
               </div>
             </div>
 
-            {/* TechJoy - Software Engineering Intern */}
-            <div className="experience-card work-card">
-              <div className="card-image">
-                {/* Insert AI-generated image here to match experience */}
-                <img 
-                  src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=TechJoy" 
-                  alt="TechJoy Software Engineering"
-                  className="experience-img"
-                />
-              </div>
-              <div className="card-content">
-                <h3 className="card-title">Software Engineering Intern</h3>
-                <p className="card-company">TechJoy • Madison, NJ</p>
-                <p className="card-period">May 2023 - Sept 2023</p>
-                <ul className="card-description-list">
-                  <li>Increased deployment efficiency by 25% and reduced post-deployment bugs by 15% through the integration of Heroku CI/CD pipelines for staging and production</li>
-                  <li>Ensured correct application performance for the bike racing app OffroadFunFinder.com by implementing end-to-end testing with Cypress</li>
-                  <li>Executed comprehensive CRUD operations testing to validate the functionality and reliability of the application</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Academic Achievements Card */}
-            <div className="experience-card academic-card">
-              <div className="card-image">
-                {/* Insert AI-generated image here to match experience */}
-                <img 
-                  src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Academic+Achievements" 
-                  alt="Academic Achievements"
-                  className="experience-img"
-                />
-              </div>
-              <div className="card-content">
-                <h3 className="card-title">Academic Achievements</h3>
-                <p className="card-company">Drew University • Madison, NJ</p>
-                <ul className="card-description-list">
-                  <li>Dean's List recognition for academic excellence</li>
-                  <li>Tilghman International Graduate Student Award recipient</li>
-                  <li>Bachelor of Science in Computer Science and French (Double Major)</li>
-                  <li>GPA: 3.63 | Honors: Dean's List, Pi Delta Phi</li>
-                </ul>
-                <div className="card-links">
-                  <a 
-                    href="https://drew.edu/academic/deans-office-college-of-liberal-arts/cla-deans-list/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="card-link"
-                  >
-                    Dean's List Info
-                  </a>
-                  <a 
-                    href="https://drew.edu/2024/07/01/drew-university-spring-2024-deans-list/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="card-link"
-                  >
-                    Spring 2024
-                  </a>
-                  <a 
-                    href="https://drew.edu/2024/04/19/drew-university-celebrates-community-leaders/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="card-link"
-                  >
-                    Community Leaders Award
-                  </a>
-                </div>
+            {/* TechJoy Media */}
+            <div className="media-item">
+              {/* Insert AI-generated image here: Modern laptop on desk with code/development theme */}
+              <img 
+                src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=TechJoy+Development" 
+                alt="TechJoy - Software Engineering"
+                className="media-img"
+              />
+              <div className="media-overlay">
+                <h3 className="media-item-title">TechJoy</h3>
+                <p className="media-item-desc">Software Engineering & CI/CD</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 4: Contact - Footer */}
+      {/* Section 5: Contact - Footer */}
       <section id="contact" className="contact-section">
         <div className="contact-container">
           <h2 className="section-title">Get In Touch</h2>

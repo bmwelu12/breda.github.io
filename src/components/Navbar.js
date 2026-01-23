@@ -30,21 +30,55 @@ function Navbar() {
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar ? navbar.offsetHeight : 80;
 
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + navbarHeight + 100;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Check if we're at the bottom of the page (within 100px)
+      if (window.scrollY + windowHeight >= documentHeight - 100) {
+        setActiveSection('contact');
+        return;
+      }
+
+      // Check each section
+      let currentSection = 'home';
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionBottom = sectionTop + sectionHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          currentSection = section.id;
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    // Use Intersection Observer for more accurate detection
     const observerOptions = {
       root: null,
-      rootMargin: `-${navbarHeight}px 0px -60% 0px`,
-      threshold: [0, 0.1, 0.5, 1]
+      rootMargin: `-${navbarHeight + 50}px 0px -50% 0px`,
+      threshold: [0, 0.1, 0.3, 0.5, 0.7, 1]
     };
 
     const observerCallback = (entries) => {
+      // Find the section with the highest intersection ratio
+      let maxRatio = 0;
+      let activeId = 'home';
+
       entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-          const sectionId = entry.target.id;
-          if (sectionId) {
-            setActiveSection(sectionId);
-          }
+        if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+          maxRatio = entry.intersectionRatio;
+          activeId = entry.target.id;
         }
       });
+
+      // Only update if we found a section with significant intersection
+      if (maxRatio > 0.1) {
+        setActiveSection(activeId);
+      }
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
@@ -55,14 +89,9 @@ function Navbar() {
       }
     });
 
-    // Handle top of page
-    const handleScroll = () => {
-      if (window.scrollY < 100) {
-        setActiveSection('home');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Also use scroll listener for bottom-of-page detection
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    updateActiveSection(); // Initial check
 
     return () => {
       sections.forEach((section) => {
@@ -70,7 +99,7 @@ function Navbar() {
           observer.unobserve(section);
         }
       });
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', updateActiveSection);
     };
   }, []);
 

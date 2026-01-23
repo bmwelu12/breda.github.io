@@ -109,6 +109,32 @@ function Home() {
                   Recognized for academic excellence at Drew University. Maintained high academic 
                   performance while pursuing a double major in Computer Science and French.
                 </p>
+                <div className="card-links">
+                  <a 
+                    href="https://drew.edu/academic/deans-office-college-of-liberal-arts/cla-deans-list/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="card-link"
+                  >
+                    Dean's List Info
+                  </a>
+                  <a 
+                    href="https://drew.edu/2024/07/01/drew-university-spring-2024-deans-list/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="card-link"
+                  >
+                    Spring 2024
+                  </a>
+                  <a 
+                    href="https://drew.edu/2023/01/24/drew-university-fall-2022-deans-list/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="card-link"
+                  >
+                    Fall 2022
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -125,9 +151,27 @@ function Home() {
               <div className="card-content">
                 <h3 className="card-title">Research & Innovation</h3>
                 <p className="card-description">
-                  Exploring cutting-edge technologies in machine learning and AI. Working on projects 
-                  that push the boundaries of what's possible with data and intelligent systems.
+                  Exploring cutting-edge technologies in machine learning and AI. Participated in the 
+                  Drew Summer Science Institute, gaining hands-on research experience and skills.
                 </p>
+                <div className="card-links">
+                  <a 
+                    href="https://drew.edu/2023/08/15/drew-university-students-gain-skills-experience-in-the-drew-summer-science-institute/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="card-link"
+                  >
+                    Summer Science Institute
+                  </a>
+                  <a 
+                    href="https://maparole.org/author/fren334/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="card-link"
+                  >
+                    Maparole Publications
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -142,11 +186,22 @@ function Home() {
                 />
               </div>
               <div className="card-content">
-                <h3 className="card-title">Professional Experience</h3>
+                <h3 className="card-title">Community Leadership & Recognition</h3>
                 <p className="card-description">
-                  Technical Product Manager at SurtAI, leading cross-functional teams to deliver 
-                  innovative IDV and Geolocation features. Building products that matter.
+                  Recognized for outstanding contributions to the Drew community. Recipient of the 
+                  Tilghman International Graduate Student Award for meaningful commitment to campus 
+                  and community engagement.
                 </p>
+                <div className="card-links">
+                  <a 
+                    href="https://drew.edu/2024/04/19/drew-university-celebrates-community-leaders/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="card-link"
+                  >
+                    Community Leaders Award
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -162,7 +217,7 @@ function Home() {
           </p>
           <div className="contact-links">
             <a 
-              href="https://www.linkedin.com/in/breda-mwelu" 
+              href="https://www.linkedin.com/in/breda-m-87276b1a3/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-link linkedin"

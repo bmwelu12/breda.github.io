@@ -6,7 +6,7 @@ function Home() {
   const [showCursor, setShowCursor] = useState(true);
   const [expandedCard, setExpandedCard] = useState(null);
 
-  const fullText = 'Technical Product Manager & Full-Stack Developer';
+  const fullText = 'Innovating at the Intersection of Product & AI';
   const typingSpeed = 50;
 
   const toggleCard = (cardId) => {

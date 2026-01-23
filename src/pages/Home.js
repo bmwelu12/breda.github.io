@@ -4,9 +4,14 @@ import './Home.css';
 function Home() {
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
+  const [expandedCard, setExpandedCard] = useState(null);
 
   const fullText = 'Technical Product Manager & Full-Stack Developer';
   const typingSpeed = 50;
+
+  const toggleCard = (cardId) => {
+    setExpandedCard(expandedCard === cardId ? null : cardId);
+  };
 
   useEffect(() => {
     let currentIndex = 0;
@@ -88,70 +93,106 @@ function Home() {
         </div>
       </section>
 
-      {/* Section 3: Experiences - Clean Minimal List */}
+      {/* Section 3: Experiences - Interactive Cards */}
       <section id="experiences" className="experiences-section">
         <div className="experiences-container">
           <h2 className="section-title">Experiences</h2>
-          <div className="experiences-list">
-            {/* SurtAI */}
-            <div className="experience-item">
-              <div className="experience-header">
-                <h3 className="experience-title">Technical Product Manager</h3>
-                <span className="experience-company">SurtAI</span>
-                <span className="experience-location">Boston, MA</span>
-                <span className="experience-period">Oct 2025 - Present</span>
+          <div className="experiences-cards">
+            {/* SurtAI Card */}
+            <div 
+              className={`experience-card ${expandedCard === 'surtai' ? 'expanded' : ''}`}
+              onClick={() => toggleCard('surtai')}
+            >
+              <div className="card-header">
+                <div className="card-header-content">
+                  <h3 className="card-job-title">Technical Product Manager</h3>
+                  <p className="card-company">SurtAI</p>
+                  <p className="card-dates">Oct 2025 - Present • Boston, MA</p>
+                </div>
+                <div className="card-toggle">
+                  <span className="toggle-icon">{expandedCard === 'surtai' ? '−' : '+'}</span>
+                </div>
               </div>
-              <ul className="experience-bullets">
-                <li>Serve as sole technical product and project manager building IDV and Geolocation features launching for <strong>4 clients in 3 months</strong></li>
-                <li>Manage offshore and near shore engineering team, owning roadmap, backlog, and cross-timezone delivery</li>
-                <li>Design and integrate verification flows, balancing compliance, fraud risk and user experience</li>
-                <li>Lead 0 to 1 build and successful client launches, translating regulatory requirements into technical specifications and execution plans</li>
-              </ul>
+              <div className="card-details">
+                <ul className="experience-bullets">
+                  <li>Serve as sole technical product and project manager building IDV and Geolocation features launching for <strong>4 clients in 3 months</strong></li>
+                  <li>Manage offshore and near shore engineering team, owning roadmap, backlog, and cross-timezone delivery</li>
+                  <li>Design and integrate verification flows, balancing compliance, fraud risk and user experience</li>
+                  <li>Lead 0 to 1 build and successful client launches, translating regulatory requirements into technical specifications and execution plans</li>
+                </ul>
+              </div>
             </div>
 
-            {/* Beats By Dre */}
-            <div className="experience-item">
-              <div className="experience-header">
-                <h3 className="experience-title">Consumer Data Analyst Intern</h3>
-                <span className="experience-company">Beats By Dre</span>
-                <span className="experience-location">New York, NY</span>
-                <span className="experience-period">Jun 2024 - Aug 2024</span>
+            {/* Beats By Dre Card */}
+            <div 
+              className={`experience-card ${expandedCard === 'beats' ? 'expanded' : ''}`}
+              onClick={() => toggleCard('beats')}
+            >
+              <div className="card-header">
+                <div className="card-header-content">
+                  <h3 className="card-job-title">Consumer Data Analyst Intern</h3>
+                  <p className="card-company">Beats By Dre</p>
+                  <p className="card-dates">Jun 2024 - Aug 2024 • New York, NY</p>
+                </div>
+                <div className="card-toggle">
+                  <span className="toggle-icon">{expandedCard === 'beats' ? '−' : '+'}</span>
+                </div>
               </div>
-              <ul className="experience-bullets">
-                <li>Achieved a <strong>10% increase</strong> in targeted marketing effectiveness by informing strategic brand and marketing decisions</li>
-                <li>Collected and analyzed data from over <strong>500 surveys</strong>, integrating both quantitative and qualitative findings</li>
-                <li>Delivered actionable insights through three detailed reports and two visual summaries based on in-depth research</li>
-              </ul>
+              <div className="card-details">
+                <ul className="experience-bullets">
+                  <li>Achieved a <strong>10% increase</strong> in targeted marketing effectiveness by informing strategic brand and marketing decisions</li>
+                  <li>Collected and analyzed data from over <strong>500 surveys</strong>, integrating both quantitative and qualitative findings</li>
+                  <li>Delivered actionable insights through three detailed reports and two visual summaries based on in-depth research</li>
+                </ul>
+              </div>
             </div>
 
-            {/* Drew Summer Science Institute */}
-            <div className="experience-item">
-              <div className="experience-header">
-                <h3 className="experience-title">Machine Learning Researcher</h3>
-                <span className="experience-company">Drew Summer Science Institute</span>
-                <span className="experience-location">Madison, NJ</span>
-                <span className="experience-period">Jun 2023 - Aug 2023</span>
+            {/* Drew Research Card */}
+            <div 
+              className={`experience-card ${expandedCard === 'drew' ? 'expanded' : ''}`}
+              onClick={() => toggleCard('drew')}
+            >
+              <div className="card-header">
+                <div className="card-header-content">
+                  <h3 className="card-job-title">Machine Learning Researcher</h3>
+                  <p className="card-company">Drew Summer Science Institute</p>
+                  <p className="card-dates">Jun 2023 - Aug 2023 • Madison, NJ</p>
+                </div>
+                <div className="card-toggle">
+                  <span className="toggle-icon">{expandedCard === 'drew' ? '−' : '+'}</span>
+                </div>
               </div>
-              <ul className="experience-bullets">
-                <li>Analyzed <strong>15,000 Vogue Runway photos</strong> and <strong>1,000 social media images</strong> using object detection and image classification</li>
-                <li>Applied LSTM models for time series analysis, predicting fashion trends from historical data and visual patterns</li>
-                <li>Enhanced forecasting accuracy by <strong>70%</strong>, improving predictive capabilities for brands and consumers</li>
-              </ul>
+              <div className="card-details">
+                <ul className="experience-bullets">
+                  <li>Analyzed <strong>15,000 Vogue Runway photos</strong> and <strong>1,000 social media images</strong> using object detection and image classification</li>
+                  <li>Applied LSTM models for time series analysis, predicting fashion trends from historical data and visual patterns</li>
+                  <li>Enhanced forecasting accuracy by <strong>70%</strong>, improving predictive capabilities for brands and consumers</li>
+                </ul>
+              </div>
             </div>
 
-            {/* TechJoy */}
-            <div className="experience-item">
-              <div className="experience-header">
-                <h3 className="experience-title">Software Engineering Intern</h3>
-                <span className="experience-company">TechJoy</span>
-                <span className="experience-location">Madison, NJ</span>
-                <span className="experience-period">May 2023 - Sept 2023</span>
+            {/* TechJoy Card */}
+            <div 
+              className={`experience-card ${expandedCard === 'techjoy' ? 'expanded' : ''}`}
+              onClick={() => toggleCard('techjoy')}
+            >
+              <div className="card-header">
+                <div className="card-header-content">
+                  <h3 className="card-job-title">Software Engineering Intern</h3>
+                  <p className="card-company">TechJoy</p>
+                  <p className="card-dates">May 2023 - Sept 2023 • Madison, NJ</p>
+                </div>
+                <div className="card-toggle">
+                  <span className="toggle-icon">{expandedCard === 'techjoy' ? '−' : '+'}</span>
+                </div>
               </div>
-              <ul className="experience-bullets">
-                <li>Increased deployment efficiency by <strong>25%</strong> and reduced post-deployment bugs by <strong>15%</strong> through the integration of Heroku CI/CD pipelines for staging and production</li>
-                <li>Ensured correct application performance for the bike racing app OffroadFunFinder.com by implementing end-to-end testing with Cypress</li>
-                <li>Executed comprehensive CRUD operations testing to validate the functionality and reliability of the application</li>
-              </ul>
+              <div className="card-details">
+                <ul className="experience-bullets">
+                  <li>Increased deployment efficiency by <strong>25%</strong> and reduced post-deployment bugs by <strong>15%</strong> through the integration of Heroku CI/CD pipelines for staging and production</li>
+                  <li>Ensured correct application performance for the bike racing app OffroadFunFinder.com by implementing end-to-end testing with Cypress</li>
+                  <li>Executed comprehensive CRUD operations testing to validate the functionality and reliability of the application</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

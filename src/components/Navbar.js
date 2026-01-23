@@ -48,7 +48,19 @@ function Navbar() {
         const sectionHeight = section.offsetHeight;
         const sectionBottom = sectionTop + sectionHeight;
 
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        // For experiences section, keep it active if we're in it or in media (since media follows experiences)
+        if (section.id === 'experiences') {
+          const mediaSection = document.getElementById('media');
+          if (mediaSection) {
+            const mediaTop = mediaSection.offsetTop;
+            // If scroll position is between experiences and media, keep experiences active
+            if (scrollPosition >= sectionTop && scrollPosition < mediaTop) {
+              currentSection = 'experiences';
+            }
+          } else if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            currentSection = 'experiences';
+          }
+        } else if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
           currentSection = section.id;
         }
       });

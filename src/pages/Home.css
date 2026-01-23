@@ -267,6 +267,44 @@
   margin-bottom: 1rem;
 }
 
+.card-company {
+  font-size: 1rem;
+  color: #7a9bc4;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.card-period {
+  font-size: 0.9rem;
+  color: rgba(224, 230, 237, 0.7);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.card-description-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  flex: 1;
+}
+
+.card-description-list li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(224, 230, 237, 0.8);
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.card-description-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #7a9bc4;
+  font-weight: bold;
+}
+
 .card-links {
   display: flex;
   flex-wrap: wrap;

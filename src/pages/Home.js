@@ -93,67 +93,70 @@ function Home() {
         <div className="experiences-container">
           <h2 className="section-title">Experiences & Media</h2>
           <div className="experiences-grid">
-            {/* Dean's List Card */}
-            <div className="experience-card academic-card">
+            {/* SurtAI - Technical Product Manager */}
+            <div className="experience-card work-card">
               <div className="card-image">
                 {/* Insert AI-generated image here to match experience */}
                 <img 
-                  src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=Dean's+List" 
-                  alt="Dean's List Achievement"
+                  src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=SurtAI" 
+                  alt="SurtAI Technical Product Manager"
                   className="experience-img"
                 />
               </div>
               <div className="card-content">
-                <h3 className="card-title">Dean's List</h3>
-                <p className="card-description">
-                  Recognized for academic excellence at Drew University. Maintained high academic 
-                  performance while pursuing a double major in Computer Science and French.
-                </p>
-                <div className="card-links">
-                  <a 
-                    href="https://drew.edu/academic/deans-office-college-of-liberal-arts/cla-deans-list/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="card-link"
-                  >
-                    Dean's List Info
-                  </a>
-                  <a 
-                    href="https://drew.edu/2024/07/01/drew-university-spring-2024-deans-list/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="card-link"
-                  >
-                    Spring 2024
-                  </a>
-                  <a 
-                    href="https://drew.edu/2023/01/24/drew-university-fall-2022-deans-list/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="card-link"
-                  >
-                    Fall 2022
-                  </a>
-                </div>
+                <h3 className="card-title">Technical Product Manager</h3>
+                <p className="card-company">SurtAI • Boston, MA</p>
+                <p className="card-period">Oct 2025 - Present</p>
+                <ul className="card-description-list">
+                  <li>Serve as sole technical product and project manager building IDV and Geolocation features launching for 4 clients in 3 months</li>
+                  <li>Manage offshore and near shore engineering team, owning roadmap, backlog, and cross-timezone delivery</li>
+                  <li>Design and integrate verification flows, balancing compliance, fraud risk and user experience</li>
+                  <li>Lead 0 to 1 build and successful client launches, translating regulatory requirements into technical specifications and execution plans</li>
+                </ul>
               </div>
             </div>
 
-            {/* Research Card */}
+            {/* Beats By Dre - Consumer Data Analyst */}
+            <div className="experience-card work-card">
+              <div className="card-image">
+                {/* Insert AI-generated image here to match experience */}
+                <img 
+                  src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Beats+By+Dre" 
+                  alt="Beats By Dre Consumer Data Analyst"
+                  className="experience-img"
+                />
+              </div>
+              <div className="card-content">
+                <h3 className="card-title">Consumer Data Analyst Intern</h3>
+                <p className="card-company">Beats By Dre • New York, NY</p>
+                <p className="card-period">Jun 2024 - Aug 2024</p>
+                <ul className="card-description-list">
+                  <li>Achieved a 10% increase in targeted marketing effectiveness by informing strategic brand and marketing decisions</li>
+                  <li>Collected and analyzed data from over 500 surveys, integrating both quantitative and qualitative findings</li>
+                  <li>Delivered actionable insights through three detailed reports and two visual summaries based on in-depth research</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Drew Summer Science Institute - ML Researcher */}
             <div className="experience-card research-card">
               <div className="card-image">
                 {/* Insert AI-generated image here to match experience */}
                 <img 
-                  src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Research" 
-                  alt="Research & Innovation"
+                  src="https://via.placeholder.com/600x400/9db5d1/ffffff?text=ML+Research" 
+                  alt="Machine Learning Research"
                   className="experience-img"
                 />
               </div>
               <div className="card-content">
-                <h3 className="card-title">Research & Innovation</h3>
-                <p className="card-description">
-                  Exploring cutting-edge technologies in machine learning and AI. Participated in the 
-                  Drew Summer Science Institute, gaining hands-on research experience and skills.
-                </p>
+                <h3 className="card-title">Machine Learning Researcher</h3>
+                <p className="card-company">Drew Summer Science Institute • Madison, NJ</p>
+                <p className="card-period">Jun 2023 - Aug 2023</p>
+                <ul className="card-description-list">
+                  <li>Analyzed 15,000 Vogue Runway photos and 1,000 social media images using object detection and image classification</li>
+                  <li>Applied LSTM models for time series analysis, predicting fashion trends from historical data and visual patterns</li>
+                  <li>Enhanced forecasting accuracy by 70%, improving predictive capabilities for brands and consumers</li>
+                </ul>
                 <div className="card-links">
                   <a 
                     href="https://drew.edu/2023/08/15/drew-university-students-gain-skills-experience-in-the-drew-summer-science-institute/" 
@@ -175,24 +178,64 @@ function Home() {
               </div>
             </div>
 
-            {/* Work/Other Card */}
+            {/* TechJoy - Software Engineering Intern */}
             <div className="experience-card work-card">
               <div className="card-image">
                 {/* Insert AI-generated image here to match experience */}
                 <img 
-                  src="https://via.placeholder.com/600x400/9db5d1/ffffff?text=Professional+Work" 
-                  alt="Professional Experience"
+                  src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=TechJoy" 
+                  alt="TechJoy Software Engineering"
                   className="experience-img"
                 />
               </div>
               <div className="card-content">
-                <h3 className="card-title">Community Leadership & Recognition</h3>
-                <p className="card-description">
-                  Recognized for outstanding contributions to the Drew community. Recipient of the 
-                  Tilghman International Graduate Student Award for meaningful commitment to campus 
-                  and community engagement.
-                </p>
+                <h3 className="card-title">Software Engineering Intern</h3>
+                <p className="card-company">TechJoy • Madison, NJ</p>
+                <p className="card-period">May 2023 - Sept 2023</p>
+                <ul className="card-description-list">
+                  <li>Increased deployment efficiency by 25% and reduced post-deployment bugs by 15% through the integration of Heroku CI/CD pipelines for staging and production</li>
+                  <li>Ensured correct application performance for the bike racing app OffroadFunFinder.com by implementing end-to-end testing with Cypress</li>
+                  <li>Executed comprehensive CRUD operations testing to validate the functionality and reliability of the application</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Academic Achievements Card */}
+            <div className="experience-card academic-card">
+              <div className="card-image">
+                {/* Insert AI-generated image here to match experience */}
+                <img 
+                  src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Academic+Achievements" 
+                  alt="Academic Achievements"
+                  className="experience-img"
+                />
+              </div>
+              <div className="card-content">
+                <h3 className="card-title">Academic Achievements</h3>
+                <p className="card-company">Drew University • Madison, NJ</p>
+                <ul className="card-description-list">
+                  <li>Dean's List recognition for academic excellence</li>
+                  <li>Tilghman International Graduate Student Award recipient</li>
+                  <li>Bachelor of Science in Computer Science and French (Double Major)</li>
+                  <li>GPA: 3.63 | Honors: Dean's List, Pi Delta Phi</li>
+                </ul>
                 <div className="card-links">
+                  <a 
+                    href="https://drew.edu/academic/deans-office-college-of-liberal-arts/cla-deans-list/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="card-link"
+                  >
+                    Dean's List Info
+                  </a>
+                  <a 
+                    href="https://drew.edu/2024/07/01/drew-university-spring-2024-deans-list/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="card-link"
+                  >
+                    Spring 2024
+                  </a>
                   <a 
                     href="https://drew.edu/2024/04/19/drew-university-celebrates-community-leaders/" 
                     target="_blank" 

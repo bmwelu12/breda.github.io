@@ -234,10 +234,9 @@ function Home() {
               className="media-link-card"
             >
               <div className="media-link-bg">
-                {/* Insert AI-generated image here: Academic research papers with neural network visualizations, scholarly aesthetic */}
                 <img 
-                  src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Maparole+Publications" 
-                  alt="Maparole Publications"
+                  src="/images/maparole-cover.jpg" 
+                  alt="Maparole Publications - French-themed artwork with Eiffel Tower and Fleur-de-lis"
                   className="media-link-img"
                 />
                 <div className="media-link-overlay"></div>

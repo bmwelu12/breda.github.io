@@ -201,6 +201,9 @@
   padding: 6rem 2rem;
   position: relative;
   scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .experiences-container {
@@ -208,6 +211,10 @@
   margin: 0 auto;
   width: 100%;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
 }
 
 .experiences-cards {

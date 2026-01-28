@@ -124,7 +124,7 @@ function Home() {
             >
               <div className="card-image">
                 <img 
-                  src={getImagePath('surtai.png')}
+                  src={getImagePath('surt.png')}
                   alt="SurtAI - Modern tech office with product management tools"
                   className="card-img"
                   onError={(e) => {

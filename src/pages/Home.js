@@ -121,6 +121,14 @@ function Home() {
               className={`experience-card ${expandedCard === 'surtai' ? 'expanded' : ''}`}
               onClick={() => toggleCard('surtai')}
             >
+              <div className="card-image">
+                {/* Insert AI-generated image here: Modern tech office with product management tools, sleek interface, professional workspace */}
+                <img 
+                  src="https://via.placeholder.com/500x300/161B22/38BDF8?text=SurtAI" 
+                  alt="SurtAI"
+                  className="card-img"
+                />
+              </div>
               <div className="card-header">
                 <div className="card-header-content">
                   <h3 className="card-job-title">Technical Product Manager</h3>
@@ -148,6 +156,14 @@ function Home() {
               className={`experience-card ${expandedCard === 'beats' ? 'expanded' : ''}`}
               onClick={() => toggleCard('beats')}
             >
+              <div className="card-image">
+                {/* Insert AI-generated image here: Music and data visualization, headphones with analytics dashboard, vibrant colors */}
+                <img 
+                  src="https://via.placeholder.com/500x300/161B22/38BDF8?text=Beats+By+Dre" 
+                  alt="Beats By Dre"
+                  className="card-img"
+                />
+              </div>
               <div className="card-header">
                 <div className="card-header-content">
                   <h3 className="card-job-title">Consumer Data Analyst Intern</h3>
@@ -174,6 +190,14 @@ function Home() {
               className={`experience-card ${expandedCard === 'drew' ? 'expanded' : ''}`}
               onClick={() => toggleCard('drew')}
             >
+              <div className="card-image">
+                {/* Insert AI-generated image here: Futuristic laboratory setting with holographic data screens and a microscope, soft blue and teal lighting, clean aesthetic */}
+                <img 
+                  src="https://via.placeholder.com/500x300/161B22/38BDF8?text=Drew+Research" 
+                  alt="Drew Summer Science Institute"
+                  className="card-img"
+                />
+              </div>
               <div className="card-header">
                 <div className="card-header-content">
                   <h3 className="card-job-title">Machine Learning Researcher</h3>
@@ -200,6 +224,14 @@ function Home() {
               className={`experience-card ${expandedCard === 'techjoy' ? 'expanded' : ''}`}
               onClick={() => toggleCard('techjoy')}
             >
+              <div className="card-image">
+                {/* Insert AI-generated image here: Modern laptop on a wooden desk with code on screen, blurry office background, professional and warm atmosphere */}
+                <img 
+                  src="https://via.placeholder.com/500x300/161B22/38BDF8?text=TechJoy" 
+                  alt="TechJoy"
+                  className="card-img"
+                />
+              </div>
               <div className="card-header">
                 <div className="card-header-content">
                   <h3 className="card-job-title">Software Engineering Intern</h3>

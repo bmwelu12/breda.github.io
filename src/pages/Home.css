@@ -216,39 +216,44 @@
   overflow-x: hidden;
 }
 
-.experiences-cards {
+.experiences-cards-wrapper {
+  flex-grow: 1;
   display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  margin-top: 3rem;
+  align-items: center;
   overflow-x: auto;
   overflow-y: hidden;
+  padding: 0 2rem;
   scroll-behavior: smooth;
-  padding: 0 2rem 1rem 2rem;
-  justify-content: center;
-  flex-grow: 1;
-  align-items: center;
   /* Hide scrollbar for Chrome, Safari and Opera */
   scrollbar-width: thin;
   scrollbar-color: rgba(56, 189, 248, 0.3) transparent;
 }
 
-.experiences-cards::-webkit-scrollbar {
+.experiences-cards-wrapper::-webkit-scrollbar {
   height: 8px;
 }
 
-.experiences-cards::-webkit-scrollbar-track {
+.experiences-cards-wrapper::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 10px;
 }
 
-.experiences-cards::-webkit-scrollbar-thumb {
+.experiences-cards-wrapper::-webkit-scrollbar-thumb {
   background: rgba(56, 189, 248, 0.3);
   border-radius: 10px;
 }
 
-.experiences-cards::-webkit-scrollbar-thumb:hover {
+.experiences-cards-wrapper::-webkit-scrollbar-thumb:hover {
   background: rgba(56, 189, 248, 0.5);
+}
+
+.experiences-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin: auto;
+  justify-content: flex-start;
+  padding-bottom: 1rem;
 }
 
 .experience-card {
@@ -736,10 +741,13 @@
     padding: 4rem 1rem;
   }
 
+  .experiences-cards-wrapper {
+    padding: 0 1rem;
+  }
+
   .experiences-cards {
     gap: 1rem;
-    padding: 0 1rem 1rem 1rem;
-    justify-content: flex-start;
+    padding-bottom: 1rem;
   }
 
   .experience-card {

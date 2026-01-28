@@ -115,7 +115,8 @@ function Home() {
       <section id="experience" className="experiences-section">
         <div className="experiences-wrapper">
           <h2 className="section-title">Experiences</h2>
-          <div className="experiences-cards">
+          <div className="experiences-cards-wrapper">
+            <div className="experiences-cards">
             {/* SurtAI Card */}
             <div 
               className={`experience-card ${expandedCard === 'surtai' ? 'expanded' : ''}`}
@@ -251,6 +252,7 @@ function Home() {
                   <li>Executed comprehensive CRUD operations testing to validate the functionality and reliability of the application</li>
                 </ul>
               </div>
+            </div>
             </div>
           </div>
           <h2 className="media-title">Media & Links</h2>

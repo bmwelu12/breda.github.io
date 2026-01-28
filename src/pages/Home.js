@@ -113,7 +113,7 @@ function Home() {
 
       {/* Section 3: Experiences - Interactive Cards */}
       <section id="experience" className="experiences-section">
-        <div className="experiences-container">
+        <div className="experiences-wrapper">
           <h2 className="section-title">Experiences</h2>
           <div className="experiences-cards">
             {/* SurtAI Card */}
@@ -253,13 +253,13 @@ function Home() {
               </div>
             </div>
           </div>
+          <h2 className="media-title">Media & Links</h2>
         </div>
       </section>
 
       {/* Section 4: Media - External Links */}
       <section id="media" className="media-section">
         <div className="media-container">
-          <h2 className="media-title">Media & Links</h2>
           <div className="media-links-grid">
             {/* Drew Summer Science Institute */}
             <a 

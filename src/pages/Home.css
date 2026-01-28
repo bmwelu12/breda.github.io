@@ -197,13 +197,16 @@
 }
 
 .experiences-section {
-  min-height: 100vh;
-  padding: 6rem 2rem;
+  padding: 0;
   position: relative;
   scroll-snap-align: start;
+}
+
+.experiences-wrapper {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding: 6rem 2rem;
 }
 
 .experiences-container {
@@ -211,10 +214,6 @@
   margin: 0 auto;
   width: 100%;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
 }
 
 .experiences-cards {
@@ -227,6 +226,8 @@
   scroll-behavior: smooth;
   padding: 0 2rem 1rem 2rem;
   justify-content: center;
+  flex-grow: 1;
+  align-items: center;
   /* Hide scrollbar for Chrome, Safari and Opera */
   scrollbar-width: thin;
   scrollbar-color: rgba(56, 189, 248, 0.3) transparent;
@@ -470,7 +471,8 @@
 .media-title {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 0;
   color: #F8FAFC;
   text-align: center;
   background: linear-gradient(135deg, #38BDF8 0%, #60A5FA 100%);

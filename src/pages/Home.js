@@ -9,11 +9,29 @@ function Home() {
   const fullText = 'Innovating at the Intersection of Product & AI';
   const typingSpeed = 50;
 
+  // Helper function to get image path with proper base URL
+  const getImagePath = (imageName) => {
+    // For GitHub Pages, use the base path from package.json homepage
+    // If PUBLIC_URL is not set, default to /breda.github.io/ based on package.json
+    const baseUrl = process.env.PUBLIC_URL || '/breda.github.io';
+    // Ensure baseUrl doesn't end with / to avoid double slashes
+    const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+    const path = `${cleanBaseUrl}/images/${imageName}`;
+    // #region agent log
+    fetch('http://127.0.0.1:7242/ingest/ccc2f80c-73b3-430c-9ea0-ee7e87dad15c',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Home.js:12',message:'Image path constructed',data:{imageName,baseUrl,cleanBaseUrl,path,publicUrl:process.env.PUBLIC_URL,windowPathname:window.location.pathname},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'D'})}).catch(()=>{});
+    // #endregion
+    return path;
+  };
+
   const toggleCard = (cardId) => {
     setExpandedCard(expandedCard === cardId ? null : cardId);
   };
 
   useEffect(() => {
+    // #region agent log
+    fetch('http://127.0.0.1:7242/ingest/ccc2f80c-73b3-430c-9ea0-ee7e87dad15c',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Home.js:16',message:'Component mounted - checking PUBLIC_URL',data:{publicUrl:process.env.PUBLIC_URL,windowLocation:window.location.href,windowPathname:window.location.pathname},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'D'})}).catch(()=>{});
+    // #endregion
+    
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
       if (currentIndex < fullText.length) {
@@ -212,9 +230,20 @@ function Home() {
             >
               <div className="media-link-bg">
                 <img 
-                  src="/images/reasearch.png" 
+                  src={getImagePath('reasearch.png')}
                   alt="Drew Summer Science Institute"
                   className="media-link-img"
+                  onError={(e) => {
+                    // #region agent log
+                    fetch('http://127.0.0.1:7242/ingest/ccc2f80c-73b3-430c-9ea0-ee7e87dad15c',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Home.js:232',message:'Image load error - reasearch.png',data:{src:e.target.src,publicUrl:process.env.PUBLIC_URL,windowLocation:window.location.href},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'D'})}).catch(()=>{});
+                    // #endregion
+                    console.error('Failed to load image:', e.target.src);
+                  }}
+                  onLoad={() => {
+                    // #region agent log
+                    fetch('http://127.0.0.1:7242/ingest/ccc2f80c-73b3-430c-9ea0-ee7e87dad15c',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Home.js:239',message:'Image loaded successfully - reasearch.png',data:{src:getImagePath('reasearch.png')},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'D'})}).catch(()=>{});
+                    // #endregion
+                  }}
                 />
                 <div className="media-link-overlay"></div>
               </div>
@@ -234,9 +263,15 @@ function Home() {
             >
               <div className="media-link-bg">
                 <img 
-                  src="/images/Gemini_Generated_Image_mfxnqumfxnqumfxn.png" 
+                  src={getImagePath('Gemini_Generated_Image_mfxnqumfxnqumfxn.png')}
                   alt="Maparole Publications - French-themed artwork with Eiffel Tower and Fleur-de-lis"
                   className="media-link-img"
+                  onError={(e) => {
+                    // #region agent log
+                    fetch('http://127.0.0.1:7242/ingest/ccc2f80c-73b3-430c-9ea0-ee7e87dad15c',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Home.js:251',message:'Image load error - Maparole',data:{src:e.target.src},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'D'})}).catch(()=>{});
+                    // #endregion
+                    console.error('Failed to load image:', e.target.src);
+                  }}
                 />
                 <div className="media-link-overlay"></div>
               </div>
@@ -256,9 +291,15 @@ function Home() {
             >
               <div className="media-link-bg">
                 <img 
-                  src="/images/deans list.png" 
+                  src={getImagePath('deans%20list.png')}
                   alt="Dean's List Information"
                   className="media-link-img"
+                  onError={(e) => {
+                    // #region agent log
+                    fetch('http://127.0.0.1:7242/ingest/ccc2f80c-73b3-430c-9ea0-ee7e87dad15c',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Home.js:273',message:'Image load error - deans list.png',data:{src:e.target.src,encoded:'deans%20list.png'},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'D'})}).catch(()=>{});
+                    // #endregion
+                    console.error('Failed to load image:', e.target.src);
+                  }}
                 />
                 <div className="media-link-overlay"></div>
               </div>
@@ -278,9 +319,15 @@ function Home() {
             >
               <div className="media-link-bg">
                 <img 
-                  src="/images/deanslist.png" 
+                  src={getImagePath('deanslist.png')}
                   alt="Spring 2024 Dean's List"
                   className="media-link-img"
+                  onError={(e) => {
+                    // #region agent log
+                    fetch('http://127.0.0.1:7242/ingest/ccc2f80c-73b3-430c-9ea0-ee7e87dad15c',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Home.js:301',message:'Image load error - deanslist.png',data:{src:e.target.src},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'D'})}).catch(()=>{});
+                    // #endregion
+                    console.error('Failed to load image:', e.target.src);
+                  }}
                 />
                 <div className="media-link-overlay"></div>
               </div>
@@ -300,9 +347,15 @@ function Home() {
             >
               <div className="media-link-bg">
                 <img 
-                  src="/images/Gemini_Generated_Image_q9blq0q9blq0q9bl.png" 
+                  src={getImagePath('Gemini_Generated_Image_q9blq0q9blq0q9bl.png')}
                   alt="Fall 2022 Dean's List"
                   className="media-link-img"
+                  onError={(e) => {
+                    // #region agent log
+                    fetch('http://127.0.0.1:7242/ingest/ccc2f80c-73b3-430c-9ea0-ee7e87dad15c',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Home.js:329',message:'Image load error - Fall 2022',data:{src:e.target.src},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'D'})}).catch(()=>{});
+                    // #endregion
+                    console.error('Failed to load image:', e.target.src);
+                  }}
                 />
                 <div className="media-link-overlay"></div>
               </div>
@@ -322,9 +375,15 @@ function Home() {
             >
               <div className="media-link-bg">
                 <img 
-                  src="/images/Gemini_Generated_Image_xuuoguxuuoguxuuo.png" 
+                  src={getImagePath('Gemini_Generated_Image_xuuoguxuuoguxuuo.png')}
                   alt="Community Leaders Award"
                   className="media-link-img"
+                  onError={(e) => {
+                    // #region agent log
+                    fetch('http://127.0.0.1:7242/ingest/ccc2f80c-73b3-430c-9ea0-ee7e87dad15c',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Home.js:357',message:'Image load error - Community Leaders',data:{src:e.target.src},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'D'})}).catch(()=>{});
+                    // #endregion
+                    console.error('Failed to load image:', e.target.src);
+                  }}
                 />
                 <div className="media-link-overlay"></div>
               </div>

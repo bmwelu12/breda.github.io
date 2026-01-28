@@ -123,11 +123,14 @@ function Home() {
               onClick={() => toggleCard('surtai')}
             >
               <div className="card-image">
-                {/* Insert AI-generated image here: Modern tech office with product management tools, sleek interface, professional workspace */}
                 <img 
-                  src="https://via.placeholder.com/500x300/161B22/38BDF8?text=SurtAI" 
-                  alt="SurtAI"
+                  src={getImagePath('surtai.png')}
+                  alt="SurtAI - Modern tech office with product management tools"
                   className="card-img"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.target.src);
+                    e.target.src = 'https://via.placeholder.com/500x300/161B22/38BDF8?text=SurtAI';
+                  }}
                 />
               </div>
               <div className="card-header">
@@ -158,11 +161,14 @@ function Home() {
               onClick={() => toggleCard('beats')}
             >
               <div className="card-image">
-                {/* Insert AI-generated image here: Music and data visualization, headphones with analytics dashboard, vibrant colors */}
                 <img 
-                  src="https://via.placeholder.com/500x300/161B22/38BDF8?text=Beats+By+Dre" 
-                  alt="Beats By Dre"
+                  src={getImagePath('beats.png')}
+                  alt="Beats By Dre - Music and data visualization with headphones"
                   className="card-img"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.target.src);
+                    e.target.src = 'https://via.placeholder.com/500x300/161B22/38BDF8?text=Beats+By+Dre';
+                  }}
                 />
               </div>
               <div className="card-header">
@@ -192,11 +198,14 @@ function Home() {
               onClick={() => toggleCard('drew')}
             >
               <div className="card-image">
-                {/* Insert AI-generated image here: Futuristic laboratory setting with holographic data screens and a microscope, soft blue and teal lighting, clean aesthetic */}
                 <img 
-                  src="https://via.placeholder.com/500x300/161B22/38BDF8?text=Drew+Research" 
-                  alt="Drew Summer Science Institute"
+                  src={getImagePath('dssi.png')}
+                  alt="Drew Summer Science Institute - Futuristic laboratory setting"
                   className="card-img"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.target.src);
+                    e.target.src = 'https://via.placeholder.com/500x300/161B22/38BDF8?text=Drew+Research';
+                  }}
                 />
               </div>
               <div className="card-header">
@@ -226,11 +235,14 @@ function Home() {
               onClick={() => toggleCard('techjoy')}
             >
               <div className="card-image">
-                {/* Insert AI-generated image here: Modern laptop on a wooden desk with code on screen, blurry office background, professional and warm atmosphere */}
                 <img 
-                  src="https://via.placeholder.com/500x300/161B22/38BDF8?text=TechJoy" 
-                  alt="TechJoy"
+                  src={getImagePath('techjoy.png')}
+                  alt="TechJoy - Modern laptop with code on screen"
                   className="card-img"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.target.src);
+                    e.target.src = 'https://via.placeholder.com/500x300/161B22/38BDF8?text=TechJoy';
+                  }}
                 />
               </div>
               <div className="card-header">

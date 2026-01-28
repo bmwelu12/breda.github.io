@@ -128,7 +128,9 @@ function Home() {
                   <p className="card-dates">Oct 2025 - Present • Boston, MA</p>
                 </div>
                 <div className="card-toggle">
-                  <span className="toggle-icon">{expandedCard === 'surtai' ? '−' : '+'}</span>
+                  <span className="toggle-icon">
+                    <span className="chevron-icon"></span>
+                  </span>
                 </div>
               </div>
               <div className="card-details">
@@ -153,7 +155,9 @@ function Home() {
                   <p className="card-dates">Jun 2024 - Aug 2024 • New York, NY</p>
                 </div>
                 <div className="card-toggle">
-                  <span className="toggle-icon">{expandedCard === 'beats' ? '−' : '+'}</span>
+                  <span className="toggle-icon">
+                    <span className="chevron-icon"></span>
+                  </span>
                 </div>
               </div>
               <div className="card-details">
@@ -177,7 +181,9 @@ function Home() {
                   <p className="card-dates">Jun 2023 - Aug 2023 • Madison, NJ</p>
                 </div>
                 <div className="card-toggle">
-                  <span className="toggle-icon">{expandedCard === 'drew' ? '−' : '+'}</span>
+                  <span className="toggle-icon">
+                    <span className="chevron-icon"></span>
+                  </span>
                 </div>
               </div>
               <div className="card-details">
@@ -201,7 +207,9 @@ function Home() {
                   <p className="card-dates">May 2023 - Sept 2023 • Madison, NJ</p>
                 </div>
                 <div className="card-toggle">
-                  <span className="toggle-icon">{expandedCard === 'techjoy' ? '−' : '+'}</span>
+                  <span className="toggle-icon">
+                    <span className="chevron-icon"></span>
+                  </span>
                 </div>
               </div>
               <div className="card-details">

@@ -55,18 +55,18 @@ function Home() {
           <div className="about-content">
             <h2 className="section-title">About Me</h2>
             <p className="about-text">
-              I'm a Technical Product Manager and Full-Stack Developer with a passion for building 
+              I'm a Technical Product Manager with a passion for building 
               innovative solutions. Currently serving as Technical Product Manager at SurtAI, I lead 
-              cross-functional teams to deliver IDV and Geolocation features.
+              cross-functional teams to deliver KYC products.
             </p>
             <p className="about-text">
-              My background combines strong technical skills in machine learning and web development 
+              My background combines strong technical skills in machine learning and data analytics 
               with product management expertise. I hold a Bachelor of Science in Computer Science and 
-              French (Double Major) from Drew University, with a GPA of 3.63 and honors including Dean's List and Pi Delta Phi.
+              French (Double Major) from Drew University.
             </p>
             <p className="about-text">
               I'm passionate about creating products that make a difference, whether through machine learning 
-              innovations, elegant web applications, or strategic product decisions.
+              innovations, intuitive data analytics, or strategic product decisions.
             </p>
           </div>
           <div className="about-image">
@@ -211,9 +211,8 @@ function Home() {
               className="media-link-card"
             >
               <div className="media-link-bg">
-                {/* Insert AI-generated image here: Futuristic laboratory setting with holographic data screens and a microscope, soft blue and teal lighting, clean aesthetic */}
                 <img 
-                  src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=Drew+Summer+Science+Institute" 
+                  src="/images/reasearch.png" 
                   alt="Drew Summer Science Institute"
                   className="media-link-img"
                 />
@@ -235,7 +234,7 @@ function Home() {
             >
               <div className="media-link-bg">
                 <img 
-                  src="/images/maparole-cover.jpg" 
+                  src="/images/Gemini_Generated_Image_mfxnqumfxnqumfxn.png" 
                   alt="Maparole Publications - French-themed artwork with Eiffel Tower and Fleur-de-lis"
                   className="media-link-img"
                 />
@@ -256,9 +255,8 @@ function Home() {
               className="media-link-card"
             >
               <div className="media-link-bg">
-                {/* Insert AI-generated image here: High-quality, minimalist 3D render of a gold academic medal or a sleek glass trophy on a dark reflective surface, cinematic lighting, 8k */}
                 <img 
-                  src="https://via.placeholder.com/600x400/9db5d1/ffffff?text=Dean%27s+List+Info" 
+                  src="/images/deans list.png" 
                   alt="Dean's List Information"
                   className="media-link-img"
                 />
@@ -279,9 +277,8 @@ function Home() {
               className="media-link-card"
             >
               <div className="media-link-bg">
-                {/* Insert AI-generated image here: Academic excellence certificate with elegant typography, gold accents, professional design */}
                 <img 
-                  src="https://via.placeholder.com/600x400/5b7fa8/ffffff?text=Spring+2024+Dean%27s+List" 
+                  src="/images/deanslist.png" 
                   alt="Spring 2024 Dean's List"
                   className="media-link-img"
                 />
@@ -302,9 +299,8 @@ function Home() {
               className="media-link-card"
             >
               <div className="media-link-bg">
-                {/* Insert AI-generated image here: Academic achievement badge with modern design, blue and gold color scheme */}
                 <img 
-                  src="https://via.placeholder.com/600x400/7a9bc4/ffffff?text=Fall+2022+Dean%27s+List" 
+                  src="/images/Gemini_Generated_Image_q9blq0q9blq0q9bl.png" 
                   alt="Fall 2022 Dean's List"
                   className="media-link-img"
                 />
@@ -325,9 +321,8 @@ function Home() {
               className="media-link-card"
             >
               <div className="media-link-bg">
-                {/* Insert AI-generated image here: Community leadership award with inspiring design, warm lighting, professional aesthetic */}
                 <img 
-                  src="https://via.placeholder.com/600x400/9db5d1/ffffff?text=Community+Leaders+Award" 
+                  src="/images/Gemini_Generated_Image_xuuoguxuuoguxuuo.png" 
                   alt="Community Leaders Award"
                   className="media-link-img"
                 />

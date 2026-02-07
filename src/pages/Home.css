@@ -80,6 +80,25 @@
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.scroll-indicator:hover {
+  transform: translateX(-50%) translateY(-5px);
+  animation: none;
+}
+
+.scroll-indicator:hover .mouse {
+  border-color: #60A5FA;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+  transform: scale(1.1);
+}
+
+.scroll-indicator:active {
+  transform: translateX(-50%) translateY(-3px);
 }
 
 .mouse {
@@ -89,6 +108,7 @@
   border-radius: 20px;
   position: relative;
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+  transition: all 0.3s ease;
 }
 
 .mouse::before {

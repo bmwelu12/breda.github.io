@@ -38,6 +38,23 @@ function Home() {
     }
   };
 
+  const scrollToAbout = (e) => {
+    e.preventDefault();
+    const section = document.getElementById('about');
+    const navbar = document.querySelector('.navbar');
+    
+    if (section && navbar) {
+      const navbarHeight = navbar.offsetHeight;
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   useEffect(() => {
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
@@ -69,7 +86,7 @@ function Home() {
             Building intelligent solutions that solve real-world problems through technology and innovation.
           </p>
         </div>
-        <div className="scroll-indicator">
+        <div className="scroll-indicator" onClick={scrollToAbout}>
           <div className="mouse"></div>
         </div>
       </section>

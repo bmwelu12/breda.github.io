@@ -28,7 +28,14 @@ function Home() {
   };
 
   const toggleCard = (cardId) => {
-    setExpandedCard(expandedCard === cardId ? null : cardId);
+    // Accordion behavior: only one card can be open at a time
+    // If clicking the same card that's already open, close it
+    if (expandedCard === cardId) {
+      setExpandedCard(null);
+    } else {
+      // Open the clicked card (this automatically closes any previously open card)
+      setExpandedCard(cardId);
+    }
   };
 
   useEffect(() => {
@@ -86,27 +93,6 @@ function Home() {
               I'm passionate about creating products that make a difference, whether through machine learning 
               innovations, intuitive data analytics, or strategic product decisions.
             </p>
-          </div>
-          <div className="about-image">
-            {/* Placeholder for headshot */}
-            <div className="headshot-placeholder">
-              <svg
-                width="400"
-                height="400"
-                viewBox="0 0 400 400"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="200" cy="200" r="200" fill="rgba(91, 127, 168, 0.1)" />
-                <circle cx="200" cy="160" r="60" fill="rgba(122, 155, 196, 0.2)" />
-                <path
-                  d="M80 320 Q200 280 320 320"
-                  stroke="rgba(122, 155, 196, 0.2)"
-                  strokeWidth="6"
-                  fill="none"
-                />
-              </svg>
-            </div>
           </div>
         </div>
       </section>

@@ -312,26 +312,6 @@ function Home() {
                 England 10.1%, Spain 6.0%) before either semifinal was played, with no post-hoc adjustments.
               </p>
             </div>
-            <div className="project-card">
-              <h3 className="project-card-title">OffroadFunFinder</h3>
-              <p className="project-card-links">
-                <a href="http://offroadfunfinder.com" target="_blank" rel="noopener noreferrer">Live site</a>
-              </p>
-              <p className="project-card-description">
-                A bike racing app with a React Native frontend and Django backend that lets users find tracks
-                and training events nationwide while completing tasks and winning prizes. Implemented
-                end-to-end testing with Cypress to ensure correct application performance.
-              </p>
-            </div>
-            <div className="project-card">
-              <h3 className="project-card-title">Fashion Recommendation System</h3>
-              <p className="project-card-description">
-                Designed a collaborative filtering model in Python using TensorFlow, Pandas, and Jupyter
-                Notebook to recommend rental outfits based on customer attributes such as body type and
-                rental purpose (e.g., weddings, vacations, business). Improved recommendation relevance by
-                30% through user clustering and similarity-based prediction techniques.
-              </p>
-            </div>
           </div>
         </div>
       </section>

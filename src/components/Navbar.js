@@ -26,7 +26,7 @@ function Navbar() {
   };
 
   useEffect(() => {
-      const sections = document.querySelectorAll('#home, #about, #experience, #media, #contact');
+      const sections = document.querySelectorAll('#home, #about, #experience, #projects, #media, #contact');
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar ? navbar.offsetHeight : 80;
 
@@ -143,8 +143,17 @@ function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a 
-              href="#media" 
+            <a
+              href="#projects"
+              className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
+              onClick={scrollToSection('projects')}
+            >
+              Projects
+            </a>
+          </li>
+          <li className="nav-item">
+            <a
+              href="#media"
               className={`nav-link ${activeSection === 'media' ? 'active' : ''}`}
               onClick={scrollToSection('media')}
             >

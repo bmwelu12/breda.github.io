@@ -41,7 +41,7 @@ function DataBackground() {
         this.height = 80 + Math.random() * 60;
         this.points = [];
         this.opacity = Math.random() * 0.15 + 0.05;
-        this.hue = 210 + Math.random() * 20;
+        this.hue = 275 + Math.random() * 15;
         
         // Generate data points
         const pointCount = 8 + Math.floor(Math.random() * 5);
@@ -143,7 +143,7 @@ function DataBackground() {
         this.height = 80 + Math.random() * 60;
         this.bars = [];
         this.opacity = Math.random() * 0.15 + 0.05;
-        this.hue = 210 + Math.random() * 20;
+        this.hue = 275 + Math.random() * 15;
         
         const barCount = 5 + Math.floor(Math.random() * 4);
         const barWidth = this.width / (barCount + 1);
@@ -205,7 +205,7 @@ function DataBackground() {
         this.size = Math.random() * 10 + 8;
         this.speed = Math.random() * 0.3 + 0.1;
         this.opacity = Math.random() * 0.2 + 0.1;
-        this.hue = 200 + Math.random() * 60;
+        this.hue = 265 + Math.random() * 25;
         this.angle = Math.random() * Math.PI * 2;
       }
 
@@ -260,7 +260,7 @@ function DataBackground() {
         this.angle = Math.random() * Math.PI * 0.5 - Math.PI * 0.25;
         this.points = [];
         this.opacity = Math.random() * 0.2 + 0.05;
-        this.hue = 200 + Math.random() * 60;
+        this.hue = 265 + Math.random() * 25;
         
         // Generate trend points
         const pointCount = 15 + Math.floor(Math.random() * 10);

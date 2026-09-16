@@ -6,6 +6,6 @@
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.35;
-  background: #0a0a0a;
+  opacity: 0.25;
+  background: transparent;
 }

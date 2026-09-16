@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/breda.github.io/static/css/main.edb44dbe.css",
-    "main.js": "/breda.github.io/static/js/main.e5c42516.js",
+    "main.css": "/breda.github.io/static/css/main.c82e260e.css",
+    "main.js": "/breda.github.io/static/js/main.d7ade986.js",
     "index.html": "/breda.github.io/index.html",
-    "main.edb44dbe.css.map": "/breda.github.io/static/css/main.edb44dbe.css.map",
-    "main.e5c42516.js.map": "/breda.github.io/static/js/main.e5c42516.js.map"
+    "main.c82e260e.css.map": "/breda.github.io/static/css/main.c82e260e.css.map",
+    "main.d7ade986.js.map": "/breda.github.io/static/js/main.d7ade986.js.map"
   },
   "entrypoints": [
-    "static/css/main.edb44dbe.css",
-    "static/js/main.e5c42516.js"
+    "static/css/main.c82e260e.css",
+    "static/js/main.d7ade986.js"
   ]
 }

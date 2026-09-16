@@ -181,6 +181,7 @@ function About() {
                 model's 98.9% JSON validity before claiming any improvement, and found the real tradeoff
                 isn't latency but per-request cost at scale once the fine-tuned model is deployed.
               </p>
+              <p className="project-link"><a href="https://claude.ai/artifact/HPyQv82tCvHoiGnSVcxqYq" target="_blank" rel="noopener noreferrer">Project spec</a></p>
             </div>
             <div className="project-item">
               <h3 className="project-title">WC26 Prediction Model</h3>
@@ -192,6 +193,7 @@ function About() {
                 artifacts. Locked in win probabilities (France 57.7%, Argentina 26.3%, England 10.1%, Spain
                 6.0%) before either semifinal was played, with no post-hoc adjustments.
               </p>
+              <p className="project-link"><a href="https://claude.ai/artifact/SDKu2EDFswdSTebkFVN8G6" target="_blank" rel="noopener noreferrer">Project spec</a></p>
             </div>
           </div>
           

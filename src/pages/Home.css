@@ -453,54 +453,13 @@
 }
 
 
-/* Section 3.5: Projects */
+/* Section 3.5: Projects (reuses .experience-card and related classes for a consistent look) */
 #projects {
   scroll-margin-top: 80px; /* Account for fixed navbar */
 }
 
-.projects-section {
-  padding: 6rem 2rem;
-  background: #0B0E14;
-  position: relative;
-  scroll-snap-align: start;
-}
-
-.projects-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.project-card {
-  background: #161B22;
-  border-radius: 12px;
-  border: 1px solid #30363D;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-card:hover {
-  border-color: #38BDF8;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.15);
-  transform: translateY(-2px);
-}
-
-.project-card-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #F8FAFC;
-  margin: 0 0 0.75rem 0;
-}
-
 .project-card-links {
-  margin: 0 0 1rem 0;
+  margin: 0.25rem 0 0 0;
   font-size: 0.95rem;
 }
 
@@ -518,19 +477,6 @@
 .project-card-sep {
   color: rgba(248, 250, 252, 0.4);
   margin: 0 0.5rem;
-}
-
-.project-card-description {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(248, 250, 252, 0.85);
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Section 4: Media - External Links */

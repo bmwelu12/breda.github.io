@@ -5,6 +5,7 @@ function Home() {
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
   const [expandedCard, setExpandedCard] = useState(null);
+  const [expandedProject, setExpandedProject] = useState(null);
 
   const fullText = 'Innovating at the Intersection of Product & AI';
   const typingSpeed = 50;
@@ -35,6 +36,14 @@ function Home() {
     } else {
       // Open the clicked card (this automatically closes any previously open card)
       setExpandedCard(cardId);
+    }
+  };
+
+  const toggleProject = (projectId) => {
+    if (expandedProject === projectId) {
+      setExpandedProject(null);
+    } else {
+      setExpandedProject(projectId);
     }
   };
 
@@ -274,43 +283,76 @@ function Home() {
       </section>
 
       {/* Section 3.5: Projects */}
-      <section id="projects" className="projects-section">
-        <div className="projects-container">
+      <section id="projects" className="experiences-section">
+        <div className="experiences-wrapper">
           <h2 className="section-title">Projects</h2>
-          <div className="projects-grid">
-            <div className="project-card">
-              <h3 className="project-card-title">Support Ticket Triage — LoRA Fine-Tune</h3>
-              <p className="project-card-links">
-                <a href="https://huggingface.co/spaces/bmwelu123/lorafinetune" target="_blank" rel="noopener noreferrer">Live demo</a>
-                <span className="project-card-sep">·</span>
-                <a href="https://github.com/bmwelu12/ticket-triage-lora-finetuning" target="_blank" rel="noopener noreferrer">Repo</a>
-                <span className="project-card-sep">·</span>
-                <a href="https://claude.ai/artifact/HPyQv82tCvHoiGnSVcxqYq" target="_blank" rel="noopener noreferrer">Project spec</a>
-              </p>
-              <p className="project-card-description">
-                Fine-tuned Qwen2.5-0.5B-Instruct with LoRA (0.44% of parameters trained) to classify support
-                tickets by category, urgency, and routing, then benchmarked it head-to-head against the
-                zero-shot base model and Claude Haiku across 1,271 held-out tickets. Measured the base
-                model's 98.9% JSON validity before claiming any improvement, and found the real tradeoff
-                isn't latency but per-request cost at scale once the fine-tuned model is deployed.
-              </p>
-            </div>
-            <div className="project-card">
-              <h3 className="project-card-title">WC26 Prediction Model</h3>
-              <p className="project-card-links">
-                <a href="https://wc26-dashboard.netlify.app/" target="_blank" rel="noopener noreferrer">Live dashboard</a>
-                <span className="project-card-sep">·</span>
-                <a href="https://github.com/bmwelu12/ML_WorldCup_repo" target="_blank" rel="noopener noreferrer">Repo</a>
-                <span className="project-card-sep">·</span>
-                <a href="https://claude.ai/artifact/SDKu2EDFswdSTebkFVN8G6" target="_blank" rel="noopener noreferrer">Project spec</a>
-              </p>
-              <p className="project-card-description">
-                Built four independent modeling approaches — static Elo, form-adjusted Elo, sequential Elo,
-                and logistic regression with leave-one-out cross-validation (85.7% peak accuracy) — to
-                forecast the 2026 World Cup, then compared them against each other to separate real signal
-                from modeling artifacts. Locked in win probabilities (France 57.7%, Argentina 26.3%,
-                England 10.1%, Spain 6.0%) before either semifinal was played, with no post-hoc adjustments.
-              </p>
+          <div className="experiences-cards-wrapper">
+            <div className="experiences-cards">
+              {/* LoRA Fine-Tune Card */}
+              <div
+                className={`experience-card ${expandedProject === 'lora' ? 'expanded' : ''}`}
+                onClick={() => toggleProject('lora')}
+              >
+                <div className="card-header">
+                  <div className="card-header-content">
+                    <h3 className="card-job-title">Support Ticket Triage — LoRA Fine-Tune</h3>
+                    <p className="card-company">Personal Project</p>
+                    <p className="project-card-links">
+                      <a href="https://huggingface.co/spaces/bmwelu123/lorafinetune" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live demo</a>
+                      <span className="project-card-sep">·</span>
+                      <a href="https://github.com/bmwelu12/ticket-triage-lora-finetuning" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Repo</a>
+                      <span className="project-card-sep">·</span>
+                      <a href="https://claude.ai/artifact/HPyQv82tCvHoiGnSVcxqYq" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Project spec</a>
+                    </p>
+                  </div>
+                  <div className="card-toggle">
+                    <span className="toggle-icon">
+                      <span className="chevron-icon"></span>
+                    </span>
+                  </div>
+                </div>
+                <div className="card-details">
+                  <ul className="experience-bullets">
+                    <li>Fine-tuned Qwen2.5-0.5B-Instruct with LoRA (<strong>0.44% of parameters trained</strong>) to classify support tickets by category, urgency, and routing</li>
+                    <li>Benchmarked head-to-head against the zero-shot base model and Claude Haiku across <strong>1,271 held-out tickets</strong></li>
+                    <li>Measured the base model's <strong>98.9% JSON validity</strong> before claiming any improvement</li>
+                    <li>Found the real tradeoff isn't latency but per-request cost at scale once the fine-tuned model is deployed</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* WC26 Prediction Model Card */}
+              <div
+                className={`experience-card ${expandedProject === 'wc26' ? 'expanded' : ''}`}
+                onClick={() => toggleProject('wc26')}
+              >
+                <div className="card-header">
+                  <div className="card-header-content">
+                    <h3 className="card-job-title">WC26 Prediction Model</h3>
+                    <p className="card-company">Personal Project</p>
+                    <p className="project-card-links">
+                      <a href="https://wc26-dashboard.netlify.app/" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live dashboard</a>
+                      <span className="project-card-sep">·</span>
+                      <a href="https://github.com/bmwelu12/ML_WorldCup_repo" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Repo</a>
+                      <span className="project-card-sep">·</span>
+                      <a href="https://claude.ai/artifact/SDKu2EDFswdSTebkFVN8G6" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Project spec</a>
+                    </p>
+                  </div>
+                  <div className="card-toggle">
+                    <span className="toggle-icon">
+                      <span className="chevron-icon"></span>
+                    </span>
+                  </div>
+                </div>
+                <div className="card-details">
+                  <ul className="experience-bullets">
+                    <li>Built four independent modeling approaches — static Elo, form-adjusted Elo, sequential Elo, and logistic regression with leave-one-out cross-validation (<strong>85.7% peak accuracy</strong>)</li>
+                    <li>Compared all four against each other to separate real signal from modeling artifacts</li>
+                    <li>Locked in win probabilities (<strong>France 57.7%, Argentina 26.3%, England 10.1%, Spain 6.0%</strong>) before either semifinal was played</li>
+                    <li>No post-hoc adjustments after results were known</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

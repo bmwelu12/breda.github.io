@@ -165,10 +165,26 @@ function About() {
             <div className="project-item">
               <h3 className="project-title">Fashion Recommendation System</h3>
               <p className="project-description">
-                Designed a collaborative filtering model in Python using TensorFlow, Pandas, and Jupyter Notebook 
-                to recommend rental outfits based on customer attributes such as body type and rental purpose 
-                (e.g., weddings, vacations, business). Improved recommendation relevance by 30% through user 
+                Designed a collaborative filtering model in Python using TensorFlow, Pandas, and Jupyter Notebook
+                to recommend rental outfits based on customer attributes such as body type and rental purpose
+                (e.g., weddings, vacations, business). Improved recommendation relevance by 30% through user
                 clustering and similarity-based prediction techniques.
+              </p>
+            </div>
+            <div className="project-item">
+              <h3 className="project-title">LoRA Fine-Tune</h3>
+              <p className="project-link"><a href="https://huggingface.co/spaces/bmwelu123/lorafinetune" target="_blank" rel="noopener noreferrer">huggingface.co/spaces/bmwelu123/lorafinetune</a></p>
+              <p className="project-description">
+                A Hugging Face Space demonstrating LoRA (Low-Rank Adaptation) fine-tuning for efficiently
+                customizing large language models with reduced computational overhead.
+              </p>
+            </div>
+            <div className="project-item">
+              <h3 className="project-title">World Cup 2026 Dashboard</h3>
+              <p className="project-link"><a href="https://wc26-dashboard.netlify.app/" target="_blank" rel="noopener noreferrer">wc26-dashboard.netlify.app</a></p>
+              <p className="project-description">
+                An interactive dashboard tracking teams, schedules, and statistics for the 2026 FIFA World Cup,
+                built and deployed for real-time data visualization.
               </p>
             </div>
           </div>

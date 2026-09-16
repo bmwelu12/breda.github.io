@@ -24,9 +24,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #0B0E14;
+  background: #FAF6EF;
   min-height: 100vh;
-  color: #F8FAFC;
+  color: #362A34;
   overflow-x: hidden; /* Prevent horizontal scroll, but allow vertical */
   /* No overflow: hidden on body to allow sticky/fixed positioning to work */
 }

@@ -270,7 +270,6 @@ function Home() {
             </div>
             </div>
           </div>
-          <h2 className="media-title">Media & Links</h2>
         </div>
       </section>
 
@@ -340,6 +339,7 @@ function Home() {
       {/* Section 4: Media - External Links */}
       <section id="media" className="media-section">
         <div className="media-container">
+          <h2 className="media-title">Media & Links</h2>
           <div className="media-links-grid">
             {/* Drew Summer Science Institute */}
             <a 

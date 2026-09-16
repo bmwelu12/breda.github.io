@@ -175,21 +175,22 @@ function About() {
               <h3 className="project-title">Support Ticket Triage — LoRA Fine-Tune</h3>
               <p className="project-link"><a href="https://huggingface.co/spaces/bmwelu123/lorafinetune" target="_blank" rel="noopener noreferrer">huggingface.co/spaces/bmwelu123/lorafinetune</a></p>
               <p className="project-description">
-                Fine-tuned Qwen2.5-0.5B-Instruct with LoRA to classify support tickets by category, urgency,
-                and routing, then benchmarked it against the zero-shot base model and Claude Haiku on accuracy,
-                latency, and cost across a held-out set of 1,271 tickets. The live Gradio demo compares all
-                three models' predictions side by side with a full metrics dashboard.
+                Fine-tuned Qwen2.5-0.5B-Instruct with LoRA (0.44% of parameters trained) to classify support
+                tickets by category, urgency, and routing, then benchmarked it head-to-head against the
+                zero-shot base model and Claude Haiku across 1,271 held-out tickets. Measured the base
+                model's 98.9% JSON validity before claiming any improvement, and found the real tradeoff
+                isn't latency but per-request cost at scale once the fine-tuned model is deployed.
               </p>
             </div>
             <div className="project-item">
               <h3 className="project-title">WC26 Prediction Model</h3>
               <p className="project-link"><a href="https://wc26-dashboard.netlify.app/" target="_blank" rel="noopener noreferrer">wc26-dashboard.netlify.app</a></p>
               <p className="project-description">
-                Built a bracket simulation model to forecast the 2026 World Cup semifinals and final, combining
-                a sequential Elo comparison (85.7% accuracy) and logistic regression with leave-one-out
-                cross-validation (82.1% accuracy) against static rating and form-adjusted baselines. Locked in
-                win probabilities (France 57.7%, Argentina 26.3%, England 10.1%, Spain 6.0%) before either
-                semifinal kicked off.
+                Built four independent modeling approaches — static Elo, form-adjusted Elo, sequential Elo,
+                and logistic regression with leave-one-out cross-validation (85.7% peak accuracy) — to forecast
+                the 2026 World Cup, then compared them against each other to separate real signal from modeling
+                artifacts. Locked in win probabilities (France 57.7%, Argentina 26.3%, England 10.1%, Spain
+                6.0%) before either semifinal was played, with no post-hoc adjustments.
               </p>
             </div>
           </div>

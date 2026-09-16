@@ -182,11 +182,14 @@ function About() {
               </p>
             </div>
             <div className="project-item">
-              <h3 className="project-title">World Cup 2026 Dashboard</h3>
+              <h3 className="project-title">WC26 Prediction Model</h3>
               <p className="project-link"><a href="https://wc26-dashboard.netlify.app/" target="_blank" rel="noopener noreferrer">wc26-dashboard.netlify.app</a></p>
               <p className="project-description">
-                An interactive dashboard tracking teams, schedules, and statistics for the 2026 FIFA World Cup,
-                built and deployed for real-time data visualization.
+                Built a bracket simulation model to forecast the 2026 World Cup semifinals and final, combining
+                a sequential Elo comparison (85.7% accuracy) and logistic regression with leave-one-out
+                cross-validation (82.1% accuracy) against static rating and form-adjusted baselines. Locked in
+                win probabilities (France 57.7%, Argentina 26.3%, England 10.1%, Spain 6.0%) before either
+                semifinal kicked off.
               </p>
             </div>
           </div>

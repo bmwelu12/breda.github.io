@@ -165,11 +165,35 @@ function About() {
             <div className="project-item">
               <h3 className="project-title">Fashion Recommendation System</h3>
               <p className="project-description">
-                Designed a collaborative filtering model in Python using TensorFlow, Pandas, and Jupyter Notebook 
-                to recommend rental outfits based on customer attributes such as body type and rental purpose 
-                (e.g., weddings, vacations, business). Improved recommendation relevance by 30% through user 
+                Designed a collaborative filtering model in Python using TensorFlow, Pandas, and Jupyter Notebook
+                to recommend rental outfits based on customer attributes such as body type and rental purpose
+                (e.g., weddings, vacations, business). Improved recommendation relevance by 30% through user
                 clustering and similarity-based prediction techniques.
               </p>
+            </div>
+            <div className="project-item">
+              <h3 className="project-title">Support Ticket Triage — LoRA Fine-Tune</h3>
+              <p className="project-link"><a href="https://huggingface.co/spaces/bmwelu123/lorafinetune" target="_blank" rel="noopener noreferrer">huggingface.co/spaces/bmwelu123/lorafinetune</a></p>
+              <p className="project-description">
+                Fine-tuned Qwen2.5-0.5B-Instruct with LoRA (0.44% of parameters trained) to classify support
+                tickets by category, urgency, and routing, then benchmarked it head-to-head against the
+                zero-shot base model and Claude Haiku across 1,271 held-out tickets. Measured the base
+                model's 98.9% JSON validity before claiming any improvement, and found the real tradeoff
+                isn't latency but per-request cost at scale once the fine-tuned model is deployed.
+              </p>
+              <p className="project-link"><a href="https://claude.ai/artifact/HPyQv82tCvHoiGnSVcxqYq" target="_blank" rel="noopener noreferrer">Project spec</a></p>
+            </div>
+            <div className="project-item">
+              <h3 className="project-title">WC26 Prediction Model</h3>
+              <p className="project-link"><a href="https://wc26-dashboard.netlify.app/" target="_blank" rel="noopener noreferrer">wc26-dashboard.netlify.app</a></p>
+              <p className="project-description">
+                Built four independent modeling approaches — static Elo, form-adjusted Elo, sequential Elo,
+                and logistic regression with leave-one-out cross-validation (85.7% peak accuracy) — to forecast
+                the 2026 World Cup, then compared them against each other to separate real signal from modeling
+                artifacts. Locked in win probabilities (France 57.7%, Argentina 26.3%, England 10.1%, Spain
+                6.0%) before either semifinal was played, with no post-hoc adjustments.
+              </p>
+              <p className="project-link"><a href="https://claude.ai/artifact/SDKu2EDFswdSTebkFVN8G6" target="_blank" rel="noopener noreferrer">Project spec</a></p>
             </div>
           </div>
           

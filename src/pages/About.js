@@ -172,11 +172,13 @@ function About() {
               </p>
             </div>
             <div className="project-item">
-              <h3 className="project-title">LoRA Fine-Tune</h3>
+              <h3 className="project-title">Support Ticket Triage — LoRA Fine-Tune</h3>
               <p className="project-link"><a href="https://huggingface.co/spaces/bmwelu123/lorafinetune" target="_blank" rel="noopener noreferrer">huggingface.co/spaces/bmwelu123/lorafinetune</a></p>
               <p className="project-description">
-                A Hugging Face Space demonstrating LoRA (Low-Rank Adaptation) fine-tuning for efficiently
-                customizing large language models with reduced computational overhead.
+                Fine-tuned Qwen2.5-0.5B-Instruct with LoRA to classify support tickets by category, urgency,
+                and routing, then benchmarked it against the zero-shot base model and Claude Haiku on accuracy,
+                latency, and cost across a held-out set of 1,271 tickets. The live Gradio demo compares all
+                three models' predictions side by side with a full metrics dashboard.
               </p>
             </div>
             <div className="project-item">

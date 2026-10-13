@@ -549,7 +549,7 @@ function Home() {
               GitHub
             </a>
             <a 
-              href="mailto:your.email@example.com" 
+              href="mailto:simonbreda0@gmail.com"
               className="social-link email"
               aria-label="Email"
             >

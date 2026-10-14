@@ -6,6 +6,7 @@ function Home() {
   const [showCursor, setShowCursor] = useState(true);
   const [expandedCard, setExpandedCard] = useState(null);
   const [expandedProject, setExpandedProject] = useState(null);
+  const [expandedEducation, setExpandedEducation] = useState(null);
 
   const fullText = 'Innovating at the Intersection of Product & AI';
   const typingSpeed = 50;
@@ -44,6 +45,14 @@ function Home() {
       setExpandedProject(null);
     } else {
       setExpandedProject(projectId);
+    }
+  };
+
+  const toggleEducation = (itemId) => {
+    if (expandedEducation === itemId) {
+      setExpandedEducation(null);
+    } else {
+      setExpandedEducation(itemId);
     }
   };
 
@@ -106,18 +115,21 @@ function Home() {
           <div className="about-content">
             <h2 className="section-title">About Me</h2>
             <p className="about-text">
-              I'm a Technical Product Manager with a passion for building 
-              innovative solutions. Currently serving as Technical Product Manager at SurtAI, I lead 
-              cross-functional teams to deliver KYC products.
+              I'm a technical product professional with a background in computer science, enterprise
+              integrations, and software quality. Currently serving as Founding TPM at Surt, I enjoy
+              understanding where a workflow breaks, investigating the cause, and working with customers
+              and engineers to make it better.
             </p>
             <p className="about-text">
-              My background combines strong technical skills in machine learning and data analytics 
-              with product management expertise. I hold a Bachelor of Science in Computer Science and 
-              French (Double Major) from Drew University.
+              I also build AI projects to explore how models perform in practical workflows, including
+              fine-tuning a support-ticket classifier and evaluating retrieval-assisted bug triage. I look
+              beyond headline accuracy to examine failure modes, class-level performance, latency, and the
+              tradeoffs that affect users.
             </p>
             <p className="about-text">
-              I'm passionate about creating products that make a difference, whether through machine learning 
-              innovations, intuitive data analytics, or strategic product decisions.
+              I hold a Bachelor of Science in Computer Science and French (Double Major) from Drew
+              University, and I'm interested in technical product, solutions, implementation, and customer
+              engineering opportunities where I can combine hands-on problem-solving with clear communication.
             </p>
           </div>
         </div>
@@ -129,27 +141,27 @@ function Home() {
           <h2 className="section-title">Experiences</h2>
           <div className="experiences-cards-wrapper">
             <div className="experiences-cards">
-            {/* SurtAI Card */}
-            <div 
-              className={`experience-card ${expandedCard === 'surtai' ? 'expanded' : ''}`}
-              onClick={() => toggleCard('surtai')}
+            {/* Surt Card */}
+            <div
+              className={`experience-card ${expandedCard === 'surt' ? 'expanded' : ''}`}
+              onClick={() => toggleCard('surt')}
             >
               <div className="card-image">
-                <img 
+                <img
                   src={getImagePath('surt.png')}
-                  alt="SurtAI - Modern tech office with product management tools"
+                  alt="Surt - Modern tech office with product management tools"
                   className="card-img"
                   onError={(e) => {
                     console.error('Failed to load image:', e.target.src);
-                    e.target.src = 'https://via.placeholder.com/500x300/161B22/38BDF8?text=SurtAI';
+                    e.target.src = 'https://via.placeholder.com/500x300/161B22/38BDF8?text=Surt';
                   }}
                 />
               </div>
               <div className="card-header">
                 <div className="card-header-content">
-                  <h3 className="card-job-title">Technical Product Manager</h3>
-                  <p className="card-company">SurtAI</p>
-                  <p className="card-dates">Oct 2025 - Present • Boston, MA</p>
+                  <h3 className="card-job-title">Founding TPM</h3>
+                  <p className="card-company">Surt</p>
+                  <p className="card-dates">Sep 2025 - Present • Boston, MA</p>
                 </div>
                 <div className="card-toggle">
                   <span className="toggle-icon">
@@ -167,13 +179,38 @@ function Home() {
               </div>
             </div>
 
+            {/* BVCC Fellowship Card */}
+            <div
+              className={`experience-card ${expandedCard === 'bvcc' ? 'expanded' : ''}`}
+              onClick={() => toggleCard('bvcc')}
+            >
+              <div className="card-header">
+                <div className="card-header-content">
+                  <h3 className="card-job-title">Software Engineering/PM Fellow</h3>
+                  <p className="card-company">Black Venture Capital Consortium (BVCC)</p>
+                  <p className="card-dates">Jun 2025 - Oct 2025</p>
+                </div>
+                <div className="card-toggle">
+                  <span className="toggle-icon">
+                    <span className="chevron-icon"></span>
+                  </span>
+                </div>
+              </div>
+              <div className="card-details">
+                <ul className="experience-bullets">
+                  <li>Selected as a Software Engineering and Product Management Fellow with the Black Venture Capital Consortium</li>
+                  <li>Contributed across both engineering and product workstreams during the fellowship</li>
+                </ul>
+              </div>
+            </div>
+
             {/* Beats By Dre Card */}
-            <div 
+            <div
               className={`experience-card ${expandedCard === 'beats' ? 'expanded' : ''}`}
               onClick={() => toggleCard('beats')}
             >
               <div className="card-image">
-                <img 
+                <img
                   src={getImagePath('beats.png')}
                   alt="Beats By Dre - Music and data visualization with headphones"
                   className="card-img"
@@ -185,9 +222,9 @@ function Home() {
               </div>
               <div className="card-header">
                 <div className="card-header-content">
-                  <h3 className="card-job-title">Consumer Data Analyst Intern</h3>
+                  <h3 className="card-job-title">Consumer Data Analyst</h3>
                   <p className="card-company">Beats By Dre</p>
-                  <p className="card-dates">Jun 2024 - Aug 2024 • New York, NY</p>
+                  <p className="card-dates">Jul 2024 - Mar 2025 • New York, NY</p>
                 </div>
                 <div className="card-toggle">
                   <span className="toggle-icon">
@@ -197,20 +234,69 @@ function Home() {
               </div>
               <div className="card-details">
                 <ul className="experience-bullets">
-                  <li>Achieved a <strong>10% increase</strong> in targeted marketing effectiveness by informing strategic brand and marketing decisions</li>
-                  <li>Collected and analyzed data from over <strong>500 surveys</strong>, integrating both quantitative and qualitative findings</li>
-                  <li>Delivered actionable insights through three detailed reports and two visual summaries based on in-depth research</li>
+                  <li>Collected and analyzed data from over <strong>500 surveys</strong>, integrating both quantitative and qualitative findings using Tableau and Power BI for visualization, and Python for data scraping</li>
+                  <li>Delivered actionable insights through detailed reports and visual summaries using Tableau based on in-depth research</li>
+                  <li>Achieved a <strong>10% increase</strong> in targeted marketing effectiveness by leveraging CRM tools like Salesforce to inform strategic brand and marketing decisions</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Bloomberg Tech Lab Fellow Card */}
+            <div
+              className={`experience-card ${expandedCard === 'bloomberg' ? 'expanded' : ''}`}
+              onClick={() => toggleCard('bloomberg')}
+            >
+              <div className="card-header">
+                <div className="card-header-content">
+                  <h3 className="card-job-title">Bloomberg Tech Lab Fellow</h3>
+                  <p className="card-company">Bloomberg</p>
+                  <p className="card-dates">Feb 2024 - Mar 2025 • New York, NY</p>
+                </div>
+                <div className="card-toggle">
+                  <span className="toggle-icon">
+                    <span className="chevron-icon"></span>
+                  </span>
+                </div>
+              </div>
+              <div className="card-details">
+                <ul className="experience-bullets">
+                  <li>Selected for a highly competitive Bloomberg Tech Lab fellowship, building innovative data-driven projects</li>
+                  <li>Gained hands-on experience with Bloomberg's technology stack, data pipelines, and software development best practices</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Data Structures and Algorithms Tutor Card */}
+            <div
+              className={`experience-card ${expandedCard === 'dsatutor' ? 'expanded' : ''}`}
+              onClick={() => toggleCard('dsatutor')}
+            >
+              <div className="card-header">
+                <div className="card-header-content">
+                  <h3 className="card-job-title">Data Structures and Algorithms Tutor</h3>
+                  <p className="card-company">Drew University</p>
+                  <p className="card-dates">Aug 2023 - May 2024 • Madison, NJ</p>
+                </div>
+                <div className="card-toggle">
+                  <span className="toggle-icon">
+                    <span className="chevron-icon"></span>
+                  </span>
+                </div>
+              </div>
+              <div className="card-details">
+                <ul className="experience-bullets">
+                  <li>Tutored Data Structures, Algorithms and Computability</li>
                 </ul>
               </div>
             </div>
 
             {/* Drew Research Card */}
-            <div 
+            <div
               className={`experience-card ${expandedCard === 'drew' ? 'expanded' : ''}`}
               onClick={() => toggleCard('drew')}
             >
               <div className="card-image">
-                <img 
+                <img
                   src={getImagePath('dssi.png')}
                   alt="Drew Summer Science Institute - Futuristic laboratory setting"
                   className="card-img"
@@ -224,7 +310,7 @@ function Home() {
                 <div className="card-header-content">
                   <h3 className="card-job-title">Machine Learning Researcher</h3>
                   <p className="card-company">Drew Summer Science Institute</p>
-                  <p className="card-dates">Jun 2023 - Aug 2023 • Madison, NJ</p>
+                  <p className="card-dates">Jun 2023 - Aug 2024 • Madison, NJ</p>
                 </div>
                 <div className="card-toggle">
                   <span className="toggle-icon">
@@ -235,7 +321,7 @@ function Home() {
               <div className="card-details">
                 <ul className="experience-bullets">
                   <li>Analyzed <strong>15,000 Vogue Runway photos</strong> and <strong>1,000 social media images</strong> using object detection and image classification</li>
-                  <li>Applied LSTM models for time series analysis, predicting fashion trends from historical data and visual patterns</li>
+                  <li>Applied LSTM and CNN models for time series and visual analysis, predicting fashion trends from historical data and visual patterns</li>
                   <li>Enhanced forecasting accuracy by <strong>70%</strong>, improving predictive capabilities for brands and consumers</li>
                 </ul>
               </div>
@@ -277,6 +363,141 @@ function Home() {
                 </ul>
               </div>
             </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3.6: Education & Involvement */}
+      <section id="education" className="education-section">
+        <div className="education-wrapper">
+          <h2 className="section-title">Education &amp; Involvement</h2>
+
+          <div className="education-subsection">
+            <h3 className="education-subtitle">Education</h3>
+            <div className="experiences-cards-wrapper">
+              <div className="experiences-cards">
+                {/* Drew University Card */}
+                <div
+                  className={`experience-card ${expandedEducation === 'drew-edu' ? 'expanded' : ''}`}
+                  onClick={() => toggleEducation('drew-edu')}
+                >
+                  <div className="card-header">
+                    <div className="card-header-content">
+                      <h3 className="card-job-title">Bachelor of Science</h3>
+                      <p className="card-company">Drew University</p>
+                      <p className="card-dates">Computer Science and French (Double Major)</p>
+                    </div>
+                    <div className="card-toggle">
+                      <span className="toggle-icon">
+                        <span className="chevron-icon"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="card-details">
+                    <ul className="experience-bullets">
+                      <li>Activities and societies: Dean's List, Pi Delta Phi</li>
+                      <li>Computer Science Club, Francophone Club</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Alliance Française Card */}
+                <div
+                  className={`experience-card ${expandedEducation === 'alliance' ? 'expanded' : ''}`}
+                  onClick={() => toggleEducation('alliance')}
+                >
+                  <div className="card-header">
+                    <div className="card-header-content">
+                      <h3 className="card-job-title">French Language and Literature</h3>
+                      <p className="card-company">Alliance Française de Paris</p>
+                      <p className="card-dates">Study Abroad</p>
+                    </div>
+                    <div className="card-toggle">
+                      <span className="toggle-icon">
+                        <span className="chevron-icon"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="card-details">
+                    <ul className="experience-bullets">
+                      <li>Took a study abroad program to improve French language skills</li>
+                      <li>Studied French Literature and Art as part of Francophone Studies</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="education-subsection">
+            <h3 className="education-subtitle">Certifications</h3>
+            <div className="certifications-list">
+              <div className="certification-item">
+                <span className="certification-name">DELF B1</span>
+                <span className="certification-issuer">Alliance Française Nairobi</span>
+                <span className="certification-date">Issued Jun 2019</span>
+              </div>
+              <div className="certification-item">
+                <span className="certification-name">Duke of Edinburgh Gold Award</span>
+                <span className="certification-issuer">The Duke of Edinburgh's Award</span>
+                <span className="certification-date">Issued Mar 2019</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="education-subsection">
+            <h3 className="education-subtitle">Volunteering</h3>
+            <div className="experiences-cards-wrapper">
+              <div className="experiences-cards">
+                {/* Peer Tutor Card */}
+                <div
+                  className={`experience-card ${expandedEducation === 'peer-tutor' ? 'expanded' : ''}`}
+                  onClick={() => toggleEducation('peer-tutor')}
+                >
+                  <div className="card-header">
+                    <div className="card-header-content">
+                      <h3 className="card-job-title">Peer Tutor</h3>
+                      <p className="card-company">MPESA Foundation Academy</p>
+                      <p className="card-dates">Jan 2019 - Nov 2019 • Education</p>
+                    </div>
+                    <div className="card-toggle">
+                      <span className="toggle-icon">
+                        <span className="chevron-icon"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="card-details">
+                    <ul className="experience-bullets">
+                      <li>Offered academic assistance to students in Mathematics, Chemistry and Physics</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Youth Worker Card */}
+                <div
+                  className={`experience-card ${expandedEducation === 'youth-worker' ? 'expanded' : ''}`}
+                  onClick={() => toggleEducation('youth-worker')}
+                >
+                  <div className="card-header">
+                    <div className="card-header-content">
+                      <h3 className="card-job-title">Youth Worker</h3>
+                      <p className="card-company">Brackenhurst Hotel, Forest and Gardens</p>
+                      <p className="card-dates">Mar 2016 • Environment</p>
+                    </div>
+                    <div className="card-toggle">
+                      <span className="toggle-icon">
+                        <span className="chevron-icon"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="card-details">
+                    <ul className="experience-bullets">
+                      <li>Planted trees in a bid to help curb the rate of deforestation in the area</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

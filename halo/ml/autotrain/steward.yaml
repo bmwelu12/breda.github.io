@@ -1,0 +1,19 @@
+# Halo steward — AutoTrain LLM fine-tuning (SFT) with DEFAULT settings.
+# We set no method or hyperparameters; AutoTrain's llm-sft defaults decide them.
+# Record what AutoTrain actually used in ../../MODELS.md after the run.
+task: llm-sft
+base_model: Qwen/Qwen2.5-3B-Instruct
+project_name: halo-steward
+log: tensorboard
+backend: local
+data:
+  path: ../data/out/steward            # contains train.jsonl + validation.jsonl + test.jsonl
+  train_split: train
+  valid_split: validation
+  column_mapping:
+    text_column: text
+params: {}                              # defaults only — do not add hyperparameters
+hub:
+  username: ${HF_USERNAME}
+  token: ${HF_TOKEN}
+  push_to_hub: true                     # PRIVATE repo under your account

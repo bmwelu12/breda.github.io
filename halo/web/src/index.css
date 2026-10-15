@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Halo — calm, warm, trustworthy. Large readable type. States always pair icon, words and color:
+   green = safe/verified, amber = caution/unverified, red = danger/impersonation. */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', 'Menlo', monospace;
+
+  --color-sand-50: #faf8f5;
+  --color-sand-100: #f3efe8;
+  --color-sand-200: #e7e0d5;
+  --color-sand-300: #d4c9b8;
+
+  --color-ink-50: #f5f7f8;
+  --color-ink-100: #e8edef;
+  --color-ink-200: #cdd7db;
+  --color-ink-300: #9fb0b7;
+  --color-ink-400: #6b7f88;
+  --color-ink-500: #4b5e67;
+  --color-ink-600: #37474f;
+  --color-ink-700: #263238;
+  --color-ink-800: #1a2327;
+  --color-ink-850: #141b1f;
+  --color-ink-900: #0e1316;
+  --color-ink-950: #080c0e;
+
+  --color-halo-300: #5eead4;
+  --color-halo-400: #2dd4bf;
+  --color-halo-500: #14b8a6;
+  --color-halo-600: #0d9488;
+  --color-halo-700: #0f766e;
+
+  --color-safe: #15a06b;
+  --color-safe-soft: #10b98120;
+  --color-caution: #d08700;
+  --color-caution-soft: #f59e0b22;
+  --color-danger: #e0484d;
+  --color-danger-soft: #ef444422;
+}
+
+:root { color-scheme: light dark; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--color-sand-100);
+  color: var(--color-ink-700);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.dark body { background: var(--color-ink-950); color: var(--color-ink-100); }
+::selection { background: var(--color-halo-500); color: white; }
+
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: var(--color-ink-300); border-radius: 6px; }
+.dark *::-webkit-scrollbar-thumb { background: var(--color-ink-700); }
+
+@keyframes haloPulse {
+  0% { box-shadow: 0 0 0 0 var(--color-halo-400); opacity: 0.5; }
+  70% { box-shadow: 0 0 0 10px transparent; opacity: 0; }
+  100% { box-shadow: 0 0 0 0 transparent; opacity: 0; }
+}
+.halo-ring::before {
+  content: ''; position: absolute; inset: 0; border-radius: 9999px;
+  animation: haloPulse 2s ease-out infinite;
+}
+@keyframes flashIn { from { background-color: var(--color-halo-500); opacity: 0.16; } to { background-color: transparent; } }
+.flash-in { animation: flashIn 1s ease-out; }
+@keyframes dot { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+.pulse-dot { animation: dot 1.5s ease-in-out infinite; }
+.tabular { font-variant-numeric: tabular-nums; }

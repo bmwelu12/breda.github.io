@@ -1,0 +1,16 @@
+{
+  "name": "halo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Halo — self-hosted AI that defends people against AI",
+  "workspaces": ["sdk/personal", "sdk/payments", "server", "web"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c cyan,magenta \"npm run dev -w @halo/server\" \"npm run dev -w @halo/web\"",
+    "start": "npm run dev",
+    "test": "npm test -w @halo/server",
+    "typecheck": "npm run typecheck -w @halo/personal && npm run typecheck -w @halo/payments && npm run typecheck -w @halo/server && npm run typecheck -w @halo/web",
+    "build": "npm run build -w @halo/web"
+  },
+  "devDependencies": { "concurrently": "^9.1.2", "typescript": "^5.7.3" }
+}

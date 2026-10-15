@@ -1,0 +1,20 @@
+# Halo Sentinel-Fast — per-line risk classifier.
+# AutoTrain text-classification with DEFAULT settings. We intentionally set no method or
+# hyperparameters; AutoTrain's defaults decide them. Record what it actually used in ../../MODELS.md.
+task: text_classification
+base_model: answerdotai/ModernBERT-base
+project_name: halo-sentinel-fast
+log: tensorboard
+backend: local
+data:
+  path: ../data/out/sentinel-fast      # contains train.csv + validation.csv + test.csv
+  train_split: train
+  valid_split: validation
+  column_mapping:
+    text_column: text
+    target_column: target
+params: {}                              # defaults only — do not add hyperparameters
+hub:
+  username: ${HF_USERNAME}
+  token: ${HF_TOKEN}
+  push_to_hub: true                     # pushes to a PRIVATE repo under your account

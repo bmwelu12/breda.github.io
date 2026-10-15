@@ -1,0 +1,46 @@
+{
+  "generatedAt": 1792047134683,
+  "models": [
+    {
+      "name": "Sentinel-Fast",
+      "task": "text-classification",
+      "base": "answerdotai/ModernBERT-base",
+      "cases": 23,
+      "baseAccuracy": 0.348,
+      "finetunedAccuracy": 0.826,
+      "delta": 0.478,
+      "falseAlarmRate": 0.125,
+      "missedScamRate": 0.167,
+      "latencyMs": 0.2,
+      "byCategory": {
+        "convincing_excuse": 0.75,
+        "prompt_injection": 0.667,
+        "payment_scam": 1.0,
+        "slow_burn_open": 1.0,
+        "slow_burn_turn": 1.0,
+        "legit": 0.8,
+        "pressure": 0.667
+      },
+      "note": "Baseline = majority-class. 'Fine-tuned' column = the deployed guardian policy the AutoTrain fine-tune distils; replace with the trained model's predictions once weights exist."
+    },
+    {
+      "name": "Steward",
+      "task": "llm-sft",
+      "base": "Qwen/Qwen2.5-3B-Instruct",
+      "cases": 6,
+      "baseAccuracy": 0.167,
+      "finetunedAccuracy": 1.0,
+      "delta": 0.833,
+      "latencyMs": 0.2,
+      "byCategory": {
+        "injection": 1.0,
+        "off_intent": 1.0,
+        "recurring": 1.0,
+        "personal_data": 1.0,
+        "impossible_goal": 1.0,
+        "benign": 1.0
+      },
+      "note": "Baseline = a naive agent that always complies. 'Fine-tuned' = the deployed Steward policy."
+    }
+  ]
+}

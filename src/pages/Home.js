@@ -532,6 +532,16 @@ function Home() {
                 className={`experience-card ${expandedProject === 'lora' ? 'expanded' : ''}`}
                 onClick={() => toggleProject('lora')}
               >
+                <div className="card-image">
+                  <img
+                    src={getImagePath('project-lora.jpg')}
+                    alt="Support Ticket Triage - Live triage dashboard"
+                    className="card-img"
+                    onError={(e) => {
+                      console.error('Failed to load image:', e.target.src);
+                    }}
+                  />
+                </div>
                 <div className="card-header">
                   <div className="card-header-content">
                     <h3 className="card-job-title">Support Ticket Triage — LoRA Fine-Tune</h3>
@@ -565,6 +575,16 @@ function Home() {
                 className={`experience-card ${expandedProject === 'wc26' ? 'expanded' : ''}`}
                 onClick={() => toggleProject('wc26')}
               >
+                <div className="card-image">
+                  <img
+                    src={getImagePath('project-wc26.jpg')}
+                    alt="WC26 Prediction Model - World Cup grand finals dashboard"
+                    className="card-img"
+                    onError={(e) => {
+                      console.error('Failed to load image:', e.target.src);
+                    }}
+                  />
+                </div>
                 <div className="card-header">
                   <div className="card-header-content">
                     <h3 className="card-job-title">WC26 Prediction Model</h3>

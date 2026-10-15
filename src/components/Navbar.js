@@ -144,20 +144,20 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <a
-              href="#education"
-              className={`nav-link ${activeSection === 'education' ? 'active' : ''}`}
-              onClick={scrollToSection('education')}
-            >
-              Education
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
               href="#projects"
               className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
               onClick={scrollToSection('projects')}
             >
               Projects
+            </a>
+          </li>
+          <li className="nav-item">
+            <a
+              href="#education"
+              className={`nav-link ${activeSection === 'education' ? 'active' : ''}`}
+              onClick={scrollToSection('education')}
+            >
+              Education
             </a>
           </li>
           <li className="nav-item">

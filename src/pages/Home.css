@@ -18,6 +18,16 @@
   z-index: 1;
 }
 
+.home-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 30px rgba(54, 42, 52, 0.15), 0 0 0 6px rgba(107, 51, 88, 0.08);
+}
+
 .home-title {
   font-size: 3.5rem;
   font-weight: 700;

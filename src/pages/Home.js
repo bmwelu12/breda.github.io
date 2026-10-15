@@ -93,6 +93,14 @@ function Home() {
       {/* Section 1: Home (Brief) - 100vh Hero */}
       <section id="home" className="home-section">
         <div className="home-hero">
+          <img
+            src={getImagePath('profile.jpg')}
+            alt="Breda Mwelu"
+            className="home-photo"
+            onError={(e) => {
+              console.error('Failed to load image:', e.target.src);
+            }}
+          />
           <h1 className="home-title">
             Hi, I'm <span className="highlight">Breda Mwelu</span>
           </h1>

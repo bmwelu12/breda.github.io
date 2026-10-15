@@ -443,6 +443,16 @@ function Home() {
                 <span className="certification-issuer">The Duke of Edinburgh's Award</span>
                 <span className="certification-date">Issued Mar 2019</span>
               </div>
+              <div className="certification-item">
+                <span className="certification-name">IBM Design Thinking</span>
+                <span className="certification-issuer">IBM</span>
+                <span className="certification-date">Issued May 2018</span>
+              </div>
+              <div className="certification-item">
+                <span className="certification-name">Microsoft Office Specialist Master Certification (MOS)</span>
+                <span className="certification-issuer">Microsoft</span>
+                <span className="certification-date">Issued Mar 2018</span>
+              </div>
             </div>
           </div>
 

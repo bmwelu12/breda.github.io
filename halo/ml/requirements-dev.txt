@@ -1,0 +1,5 @@
+-r serve/requirements-stub.txt
+pytest>=8
+httpx>=0.27
+datasets>=3.2
+pandas>=2.2

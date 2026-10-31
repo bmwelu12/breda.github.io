@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.db
+*.db-*
+ml/models/
+ml/data/processed/
+ml/data/raw/
+__pycache__/
+.pytest_cache/
+.env
+dist-standalone/

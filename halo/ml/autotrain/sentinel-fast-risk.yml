@@ -1,0 +1,21 @@
+# Sentinel-Fast (risk head). AutoTrain text classification (single-label; see PLAN.md D1).
+# Settings = AutoTrain 0.8.36 UI defaults (autotrain/app/params.py PARAMS["text-classification"]).
+# Only the fields where the UI default differs from the library default are listed under params.
+task: text_classification
+base_model: answerdotai/ModernBERT-base
+project_name: halo-sentinel-fast-risk
+log: tensorboard
+backend: ${AUTOTRAIN_BACKEND}   # e.g. spaces-t4-small, or local
+data:
+  path: ml/data/processed/sentinel-fast-risk
+  train_split: train
+  valid_split: validation
+  column_mapping:
+    text_column: text
+    target_column: target
+params:
+  mixed_precision: fp16
+hub:
+  username: ${HF_ORG}
+  token: ${HF_TOKEN}
+  push_to_hub: true   # AutoTrain creates the repo with private=True

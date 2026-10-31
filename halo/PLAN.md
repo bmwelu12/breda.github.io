@@ -10,7 +10,7 @@
 > | D4 | `Qwen/Qwen2.5-1.5B-Instruct` |
 > | D5 | Halo stays in `/halo` in this repo for now (this session can't create repos) |
 > | D6 | Open: `huggingface.co` still blocked here |
-> | D7 | Open: please confirm the ~$30–45 budget before `make train` |
+> | D7 | Approved by founder on 2026-10-31 ("approved for hugging face") |
 > Date: 2026-10-31
 
 Halo is self-hosted AI that defends people against AI agents: **inbound** (identify, verify, question and warn about agents that contact a person) and **outbound** (check a person's own agents' actions against what the person actually wants). The business is a two-sided verified agent network.

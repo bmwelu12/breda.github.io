@@ -1,0 +1,30 @@
+# steward. AutoTrain LLM fine-tuning, trainer "sft" (PLAN.md D3).
+# Settings = AutoTrain 0.8.36 UI defaults (autotrain/app/params.py PARAMS["llm"]), copied exactly.
+# chat_template "none": AutoTrain trains on the text column as given; ml/data/build.py renders it
+# with the base model's own chat format (ChatML for Qwen2.5).
+task: llm-sft
+base_model: Qwen/Qwen2.5-1.5B-Instruct
+project_name: halo-steward
+log: tensorboard
+backend: ${AUTOTRAIN_BACKEND}   # e.g. spaces-a10g-large, or local
+data:
+  path: ml/data/processed/steward
+  train_split: train
+  valid_split: validation
+  chat_template: none
+  column_mapping:
+    text_column: text
+params:
+  block_size: 1024
+  epochs: 3
+  mixed_precision: fp16
+  peft: true
+  quantization: int4
+  target_modules: all-linear
+  padding: right
+  max_completion_length: 128
+  distributed_backend: ddp
+hub:
+  username: ${HF_ORG}
+  token: ${HF_TOKEN}
+  push_to_hub: true   # AutoTrain creates the repo with private=True

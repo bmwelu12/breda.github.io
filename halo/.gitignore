@@ -8,3 +8,4 @@ ml/data/raw/
 __pycache__/
 .pytest_cache/
 .env
+dist-standalone/

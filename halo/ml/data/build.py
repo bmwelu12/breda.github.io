@@ -37,7 +37,7 @@ DATA = Path(__file__).resolve().parent
 OUT = DATA / "processed"
 APPROVED = DATA / "reviewed" / "approved.jsonl"
 
-TARGETS = {"sentinel_fast": 7500, "sentinel_reason": 1600, "steward": 1600, "interrogator": 600}
+TARGETS = {"sentinel_fast": 30000, "sentinel_reason": 1600, "steward": 1600, "interrogator": 600}
 
 
 def split_of(group_id: str) -> str:

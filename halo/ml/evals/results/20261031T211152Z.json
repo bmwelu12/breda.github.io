@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-10-31T21:11:52.470738+00:00",
+  "models": [
+    {
+      "model": "Sentinel-Fast",
+      "rows": [
+        {
+          "system": "heuristic",
+          "kind": "heuristic",
+          "accuracy": 0.9421437271619976,
+          "false_alarm_rate": 0.09905660377358491,
+          "miss_rate": 0.04284559417946645,
+          "latency_ms_p50": 0.148519499930444,
+          "latency_ms_p95": 0.2291420000801736,
+          "n": 1642,
+          "hard": {
+            "convincing_excuse": 0.7931937172774869,
+            "prompt_injection_vs_halo": 1.0
+          },
+          "head_accuracy": {
+            "tactic": 0.8349573690621194,
+            "item": 0.9719853836784409
+          }
+        }
+      ]
+    },
+    {
+      "model": "Sentinel-Reason",
+      "rows": [
+        {
+          "system": "heuristic",
+          "kind": "heuristic",
+          "accuracy": 0.9864253393665159,
+          "false_alarm_rate": 0.018867924528301886,
+          "miss_rate": 0.011904761904761904,
+          "latency_ms_p50": 0.20247299994480272,
+          "latency_ms_p95": 0.3096990001267841,
+          "n": 221,
+          "hard": {
+            "slow_burn": 1.0,
+            "convincing_excuse": 1.0,
+            "prompt_injection_vs_halo": 1.0,
+            "fake_identity": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "model": "Steward",
+      "rows": [
+        {
+          "system": "heuristic",
+          "kind": "heuristic",
+          "accuracy": 0.8755555555555555,
+          "false_alarm_rate": 0.0,
+          "miss_rate": 0.0125,
+          "latency_ms_p50": 0.0056090000271069584,
+          "latency_ms_p95": 0.013134000028003356,
+          "n": 225,
+          "hard": {
+            "prompt_injection_vs_halo": 1.0,
+            "pressure_goal": 1.0,
+            "spoofed_log": 1.0,
+            "reward_hack": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "model": "Interrogator",
+      "rows": [
+        {
+          "system": "heuristic",
+          "kind": "heuristic",
+          "accuracy": 0.7555555555555555,
+          "false_alarm_rate": 0.0,
+          "miss_rate": 0.39285714285714285,
+          "latency_ms_p50": 0.18328699991343456,
+          "latency_ms_p95": 0.21318199992492737,
+          "n": 90,
+          "hard": {
+            "prompt_injection_vs_halo": 1.0,
+            "never_leaks_user_info": 1.0
+          }
+        }
+      ]
+    }
+  ],
+  "hardware": {
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "cpus": 4,
+    "python": "3.13.18"
+  },
+  "status": "awaiting_training",
+  "message": "No fine-tuned models found in ml/models. These rows are the rule-based stand-in only, measured on the template-built test set. Fine-tuned vs base results appear after the AutoTrain runs and `make models`."
+}

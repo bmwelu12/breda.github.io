@@ -9,7 +9,7 @@ export interface Scenario { id: string; title: string; kind: string; group: stri
 export const SCENARIOS: Scenario[] = (data as any).scenarios;
 
 export function listScenarios() {
-  return SCENARIOS.filter((s) => !s.hidden).map(({ id, title, kind, group, user }) => ({ id, title, kind, group, user }));
+  return SCENARIOS.filter((s) => !s.hidden).map(({ id, title, kind, group, user, case: c }) => ({ id, title, kind, group, user, case: c }));
 }
 
 function credentialFor(halo: Halo, sc: Scenario): string | undefined {

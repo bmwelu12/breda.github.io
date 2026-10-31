@@ -60,6 +60,10 @@ export function outboundGuardrails(a: ProposedAction, agent: PersonalAgent, cont
   if (agent.status !== "active") r.push({ rule: "agent_not_active", decision: "block", reason: `This agent is ${agent.status}.` });
   const fields: string[] = args.fields ?? [];
   const blob = JSON.stringify(args);
+  // Lesson 4: never trust agent-supplied logs. A claimed approval only counts if Halo's own record has it.
+  const claimed = String(args.claimed_log ?? "") + " " + (a.context ?? []).filter((c) => /log|tool output|tool_result/i.test(c.source)).map((c) => c.text).join(" ");
+  if (/approv|confirm|authori[sz]ed|user_approved/i.test(claimed))
+    r.push({ rule: "agent_supplied_log_rejected", decision: "block", reason: "Your agent claimed you already approved this, but Halo's own record has no such approval." });
   if (fields.some((f) => SECRET_FIELDS.includes(f)) || SECRET_TEXT.test(blob))
     r.push({ rule: "never_share_secrets", decision: "block", reason: "Halo never lets one-time codes, PINs or passwords leave through an agent." });
   if (a.tool === "buy" || a.tool === "subscribe" || a.tool === "send_money") {

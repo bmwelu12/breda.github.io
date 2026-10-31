@@ -1,6 +1,16 @@
 # Halo — Build Plan (v0, awaiting founder approval)
 
-> Status: **DRAFT. No paid training run will start until the founder approves this plan and answers the open decisions in §2.**
+> Status: **Decisions D1–D5 taken (founder: "choose the best" → recommended options). Paid training still blocked on D6 (Hub network access) and explicit budget approval (D7).**
+>
+> | Decision | Chosen |
+> |---|---|
+> | D1 | Three single-label Sentinel-Fast heads |
+> | D2 | AutoTrain UI defaults (LoRA + int4, 3 epochs) |
+> | D3 | LLM SFT; text pre-rendered in the base model's chat format, `chat_template: none` |
+> | D4 | `Qwen/Qwen2.5-1.5B-Instruct` |
+> | D5 | Halo stays in `/halo` in this repo for now (this session can't create repos) |
+> | D6 | Open: `huggingface.co` still blocked here |
+> | D7 | Open: please confirm the ~$30–45 budget before `make train` |
 > Date: 2026-10-31
 
 Halo is self-hosted AI that defends people against AI agents: **inbound** (identify, verify, question and warn about agents that contact a person) and **outbound** (check a person's own agents' actions against what the person actually wants). The business is a two-sided verified agent network.

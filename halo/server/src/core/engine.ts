@@ -519,6 +519,7 @@ export class Halo {
       final_reason: final === model.decision && severity(model.decision) >= severity(guardDecision) ? model.reason : strictRule?.reason ?? model.reason,
       model, guardrails: rules, disagreement, status: final === "allow" ? "executed" : final === "ask" ? "pending" : "blocked", ts: Date.now(),
     };
+    if (input.args?.claimed_log) this.log.append("agent_claim.recorded_not_trusted", "agent:" + agent.id, user.id, { action_id: d.id, claim_sha256: sha256hex(String(input.args.claimed_log)) });
     if (disagreement) this.log.append("guardrail.model_disagreement", "halo", user.id, { action_id: d.id, model: model.decision, guardrails: guardDecision, rules: rules.map((r) => r.rule) });
     this.store.put("actions", d.id, d);
     this.log.append("personal_action.decided", "halo", user.id, { action_id: d.id, agent_id: agent.id, tool: d.tool, decision: final, origin: model.origin, rules: rules.map((r) => r.rule) });

@@ -7,10 +7,14 @@ import { makeHalo } from "./helpers.ts";
 import { runScenario } from "../src/core/scenarios.ts";
 
 const ROOT = join(__dirname, "..", "..");
+// Endpoints and SDK identifiers of closed AI providers. (Plain mentions of a company, e.g. citing a
+// public incident report, are allowed; calling or importing its API is not.)
 const CLOSED = [
-  "api.openai.com", "openai", "anthropic", "@anthropic-ai", "claude-", "generativelanguage.googleapis.com", "google-generativeai", "@google/generative-ai",
-  "vertexai", "aiplatform.googleapis.com", "api.cohere", "cohere-ai", "api.mistral.ai", "@mistralai", "api.groq.com", "api.together", "bedrock-runtime",
-  "azure.com/openai", "openai.azure.com", "api.perplexity", "x.ai/api", "api.deepseek.com", "replicate.com",
+  "api.openai.com", "openai.azure.com", "azure.com/openai", "from openai", "import openai", "require(\"openai\")", "from \"openai\"", "'openai'",
+  "api.anthropic.com", "@anthropic-ai", "import anthropic", "from anthropic",
+  "generativelanguage.googleapis.com", "google.generativeai", "@google/generative-ai", "@google/genai", "aiplatform.googleapis.com", "vertexai",
+  "api.cohere", "cohere-ai", "import cohere", "api.mistral.ai", "@mistralai", "mistralai", "api.groq.com", "api.together", "bedrock-runtime",
+  "api.perplexity", "api.x.ai", "api.deepseek.com", "api.replicate.com",
 ];
 const SKIP = new Set(["node_modules", ".git", "dist", "dist-standalone", "models", "processed", "raw", "__pycache__", "results"]);
 const SELF = ["no-closed-ai.test.ts", "test_no_closed_ai.py", "MODELS.md", "README.md", "PLAN.md", "DATASETS.md", "package-lock.json"];

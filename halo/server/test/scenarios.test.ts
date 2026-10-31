@@ -122,3 +122,39 @@ describe("red team", () => {
     expect(halo.listReview().filter((r) => r.source === "red_team_miss").length).toBe(misses);
   });
 });
+
+describe("2026 incident cases", () => {
+  it("groups agents coordinating through one drop site into a campaign", async () => {
+    const { halo } = makeHalo();
+    const r: any = await run(halo, "case-board-swarm");
+    expect(r.campaigns.length).toBe(1);
+    expect(r.campaigns[0].contact_ids.length).toBe(6);
+  });
+  it("rejects an agent-supplied log claiming the user approved", async () => {
+    const { halo } = makeHalo();
+    const r: any = await run(halo, "case-spoofed-log");
+    const buy = r.decisions.find((d: any) => d.tool === "buy");
+    expect(buy.decision).toBe("block");
+    expect(buy.guardrails.map((g: any) => g.rule)).toContain("agent_supplied_log_rejected");
+    expect(halo.log.list().some((e) => e.type === "agent_claim.recorded_not_trusted")).toBe(true);
+  });
+  it("reward-hacking goal lowers autonomy and nothing runs", async () => {
+    const { halo } = makeHalo();
+    const r: any = await run(halo, "case-reward-hack");
+    expect(halo.getPersonalAgent(r.agent_id).autonomy).toBe("reduced");
+    expect(r.decisions.every((d: any) => d.decision !== "allow")).toBe(true);
+    expect(r.decisions.find((d: any) => d.tool === "share_info").decision).toBe("block");
+  });
+  it("a rationalized password send is blocked", async () => {
+    const { halo } = makeHalo();
+    const r: any = await run(halo, "case-rationalized");
+    expect(r.decisions[0].decision).toBe("block");
+  });
+  it("a hesitant caller asking for a code is still high risk; a deterred agent stays low", async () => {
+    const { halo } = makeHalo();
+    const a: any = await run(halo, "case-hesitant-caller");
+    expect(halo.getInbound(a.inbound_id).risk).toBeGreaterThanOrEqual(90);
+    const b: any = await run(halo, "case-notice-deters");
+    expect(halo.getInbound(b.inbound_id).risk).toBeLessThan(45);
+  });
+});

@@ -507,6 +507,7 @@ function Home() {
                     <li>Benchmarked baseline vs. context-engineered prompting across <strong>300 held-out Bugzilla bug reports</strong>, tracking per-class precision/recall/F1 against a 77%/23% severity split</li>
                     <li>Caught a real bug before trusting any result: Claude's JSON replies came wrapped in a markdown fence, silently producing <strong>0/600 valid predictions</strong> on the first run</li>
                     <li>Found the honest tradeoff: context raised accuracy (<strong>75.3% → 80.3%</strong>) and F1 on both classes, but severe-bug recall dropped <strong>79.2% → 72.7%</strong></li>
+                    <li>The embedded live demo above runs baseline classification only — the full context-engineered comparison and its result live in the repo's results explorer</li>
                   </ul>
                 </div>
               </div>

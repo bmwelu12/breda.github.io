@@ -467,6 +467,50 @@ function Home() {
                   </ul>
                 </div>
               </div>
+
+              {/* Bug Severity Context Engineering Card */}
+              <div
+                className={`experience-card ${expandedProject === 'bugsev' ? 'expanded' : ''}`}
+                onClick={() => toggleProject('bugsev')}
+              >
+                <div className="card-image">
+                  <img
+                    src={getImagePath('project-bugsev.jpg')}
+                    alt="Bug Severity Context Engineering - interactive results explorer"
+                    className="card-img"
+                    onError={(e) => {
+                      console.error('Failed to load image:', e.target.src);
+                    }}
+                  />
+                </div>
+                <div className="card-header">
+                  <div className="card-header-content">
+                    <h3 className="card-job-title">Bug Severity Triage — Context Engineering</h3>
+                    <p className="card-company">Personal Project</p>
+                    <p className="project-card-links">
+                      <a href="https://huggingface.co/spaces/bmwelu123/lorafinetune" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live demo</a>
+                      <span className="project-card-sep">·</span>
+                      <a href="https://github.com/bmwelu12/bug-severity-context-eng" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Repo</a>
+                      <span className="project-card-sep">·</span>
+                      <a href="https://bmwelu12.github.io/bug-severity-context-eng/" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Results explorer</a>
+                    </p>
+                  </div>
+                  <div className="card-toggle">
+                    <span className="toggle-icon">
+                      <span className="chevron-icon"></span>
+                    </span>
+                  </div>
+                </div>
+                <div className="card-details">
+                  <ul className="experience-bullets">
+                    <li>Tested whether giving <strong>Claude Haiku 4.5</strong> retrieved similar past bugs at inference time — context engineering — beats a no-context baseline, instead of fine-tuning a model</li>
+                    <li>Benchmarked baseline vs. context-engineered prompting across <strong>300 held-out Bugzilla bug reports</strong>, tracking per-class precision/recall/F1 against a 77%/23% severity split</li>
+                    <li>Caught a real bug before trusting any result: Claude's JSON replies came wrapped in a markdown fence, silently producing <strong>0/600 valid predictions</strong> on the first run</li>
+                    <li>Found the honest tradeoff: context raised accuracy (<strong>75.3% → 80.3%</strong>) and F1 on both classes, but severe-bug recall dropped <strong>79.2% → 72.7%</strong></li>
+                    <li>The embedded live demo above runs baseline classification only — the full context-engineered comparison and its result live in the repo's results explorer</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
